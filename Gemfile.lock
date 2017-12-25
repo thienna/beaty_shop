@@ -207,6 +207,7 @@ GEM
     momentjs-rails (2.17.1)
       railties (>= 3.1)
     multi_json (1.12.2)
+    mysql2 (0.4.10)
     nenv (0.3.0)
     nio4r (2.1.0)
     nokogiri (1.8.1)
@@ -407,6 +408,7 @@ DEPENDENCIES
   mini_magick (= 4.7.0)
   minitest-reporters (= 1.1.14)
   momentjs-rails (>= 2.17.1)
+  mysql2
   pg
   pry
   railroady

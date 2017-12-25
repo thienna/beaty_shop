@@ -20,6 +20,7 @@ gem "mini_magick", "4.7.0"
 gem "momentjs-rails", ">= 2.17.1"
 gem "i18n-js"
 gem "devise"
+gem "mysql2"
 
 group :development, :test do
   gem "sqlite3", "1.3.13"
