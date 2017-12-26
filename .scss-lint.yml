@@ -2,3 +2,6 @@ scss_files: 'app/assets/stylesheets/**'
 exclude:
   - 'app/assets/stylesheets/application.css'
   - 'vendor/assets/**'
+  - 'app/assets/stylesheets/jquery.mCustomScrollbar.min.css'
+  - 'app/assets/stylesheets/magnific-popup.min.css'
+  - 'app/assets/stylesheets/theme.min.css'

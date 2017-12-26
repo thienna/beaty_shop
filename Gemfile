@@ -6,6 +6,7 @@ git_source(:github) do |repo_name|
 end
 
 gem "rails", "~> 5.1.4"
+gem "puma", "~>3.7"
 gem "config"
 gem "bcrypt", "3.1.11"
 gem "bootstrap-sass", "3.3.7"
@@ -21,6 +22,7 @@ gem "momentjs-rails", ">= 2.17.1"
 gem "i18n-js"
 gem "devise"
 gem "mysql2"
+gem "font-awesome-sass", "~> 4.7.0"
 
 group :development, :test do
   gem "sqlite3", "1.3.13"
