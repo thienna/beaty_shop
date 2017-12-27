@@ -143,6 +143,8 @@ GEM
     faker (1.8.5)
       i18n (~> 0.9.1)
     ffi (1.9.18)
+    font-awesome-sass (4.7.0)
+      sass (>= 3.2)
     formatador (0.2.5)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
@@ -224,6 +226,7 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
     public_suffix (3.0.1)
+    puma (3.11.0)
     rack (2.0.3)
     rack-test (0.8.2)
       rack (>= 1.0, < 3)
@@ -397,6 +400,7 @@ DEPENDENCIES
   devise
   eslint-rails
   faker
+  font-awesome-sass (~> 4.7.0)
   guard (= 2.13.0)
   guard-minitest (= 2.4.4)
   guard-rspec
@@ -411,6 +415,7 @@ DEPENDENCIES
   mysql2
   pg
   pry
+  puma (~> 3.7)
   railroady
   rails (~> 5.1.4)
   rails-controller-testing (= 1.0.2)
