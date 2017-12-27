@@ -1,0 +1,137 @@
+<div id="header-ontop" class="is-sticky"></div>
+<div id="header" class="header">
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-bar-left">
+        <div class="logo">
+          <%= link_to "#" do %>
+            <%= image_tag "logo.jpeg" %>
+          <% end %>
+        </div>
+        <div class="form-search-wapper">
+          <%= form_tag nil, class: "form-search" do %>
+            <%= text_field_tag :search_input, nil,
+              placeholder: t("home_page.search_holder"), class: "input" %>
+            <%= button_tag name: :search_button, class: "btn-search" do %>
+              <span class="flaticon-magnifying-glass34"></span>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+      <div class="top-bar-right">
+        <ul class="kt-nav top-bar-menu">
+          <li class="menu-item-has-children box-setting">
+            <%= link_to "#" do %>
+              <span class="menu-icon flaticon-configuration21"></span>
+            <% end %>
+            <div class="sub-menu box-setting-content">
+              <div class="box-section">
+                <h4 class="title"><%= t "home_page.select_lang" %></h4>
+                <div class="inner">
+                  <%= link_to locale: :en do %>
+                    <%= image_tag "en.png" %>
+                  <% end %>
+                  <%= link_to locale: :vi do %>
+                    <%= image_tag "vi.png" %>
+                  <% end %>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="menu-item-has-children mini-cart">
+            <%= link_to "#", class: "cart-link" do %>
+              <span class="menu-icon  icon flaticon-shopping-cart6"></span>
+              <span class="count">0</span>
+              <span class="text"><%= t "home_page.item" %></span>
+              <span class="kak">-</span>
+              <span class="subtotal">$0.00</span>
+            <% end %>
+            <div class="sub-menu mini-cart-content">
+              <div class="content-inner">
+                <h3 class="box-title">
+                  <%= raw t("home_page.item_in_cart",
+                    quantity: pluralize(3, t("home_page.item"))) %>
+                </h3>
+                <ul class="list-item-cart">
+                  <li class="item-cart">
+                    <div class="thumb">
+                      <%= link_to "#" do %>
+                        <%= image_tag "product-sample-big.jpg" %>
+                      <% end %>
+                    </div>
+                    <div class="product-info">
+                      <h4 class="product-name">
+                        <%= link_to "Stockholm Chair high Mosta gruancy", "#" %>
+                      </h4>
+                      <span class="price">1 x $75.00</span>
+                      <%= link_to "#", class: "remove-item" do %>
+                        <i class="fa fa-close"></i>
+                      <% end %>
+                    </div>
+                  </li>
+                  <li class="item-cart">
+                    <div class="thumb">
+                      <%= link_to "#" do %>
+                        <%= image_tag "product-sample-small.png" %>
+                      <% end %>
+                    </div>
+                    <div class="product-info">
+                      <h4 class="product-name">
+                        <%= link_to "Stockholm Chair high Mosta gruancy", "#" %>
+                      </h4>
+                      <span class="price">1 x $75.00</span>
+                      <%= link_to "#", class: "remove-item" do %>
+                        <i class="fa fa-close"></i>
+                      <% end %>
+                    </div>
+                  </li>
+                </ul>
+                <div class="subtotal">
+                  <%= t "home_page.sub_total" %>
+                  <span class="amout">$75.00</span>
+                </div>
+                <%= link_to "#", class: "button" do %>
+                  <%= t "home_page.shopping_cart" %>
+                  <i class="fa fa-close"></i>
+                <% end %>
+                <%= link_to "#", class: "button primary" do %>
+                  <%= t "home_page.order" %>
+                  <i class="fa fa-close"></i>
+                <% end %>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="main-header">
+    <div class="container">
+      <div class="main-menu-wapper">
+        <%= link_to "#", class: "mobile-navigation" do %>
+          <span class="icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+          <%= t "home_page.main_menu" %>
+        <% end %>
+        <ul class="kt-nav main-menu clone-main-menu">
+          <li>
+            <%= link_to t("home_page.home"), "#" %>
+          </li>
+          <li>
+            <%= link_to t("home_page.introduce"), "#" %>
+          </li>
+          <li>
+            <%= link_to t("home_page.shopping_guides"), "#" %>
+          </li>
+          <li>
+            <%= link_to t("home_page.hotline"), "tel:+84972792096",
+              title: t("home_page.hotline_detail") %>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
