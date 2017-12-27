@@ -1,0 +1,15 @@
+vi:
+  home_page:
+    hotline: "Đường dây nóng"
+    hotline_detail: "Liên hệ 0972 792 096"
+    home: "Trang chủ"
+    introduce: "Giới thiệu"
+    shopping_guides: "Hướng dẫn mua hàng"
+    main_menu: "Menu Chính"
+    shopping_cart: "Xem giỏ hàng"
+    order: "Đặt hàng"
+    sub_total: "Thành tiền"
+    item_in_cart: "Bạn có <span class='count'>%{quantity}</span> trong giỏ hàng."
+    select_lang: "Chọn ngôn ngữ của bạn:"
+    item: "món hàng"
+    search_holder: "Tìm kiếm sản phẩm..."

@@ -2,13 +2,13 @@
 <html>
   <head>
     <title>Shop</title>
-    <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= render "layouts/include_tag" %>
   </head>
 
   <body>
+    <%= render "layouts/mobile_menu" %>
+    <%= render "layouts/header" %>
     <%= yield %>
   </body>
 </html>
