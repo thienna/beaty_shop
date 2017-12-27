@@ -13,3 +13,9 @@ en:
     select_lang: "Select your language:"
     item: "item"
     search_holder: "Search entire store here..."
+    copy_right: "Copyright © 2017 Mike's Company. All Rights Reserved."
+    scroll_top: "Scroll to Top"
+    new_letters:
+      title: "Join Our Newsletter"
+      sub_title: "Sign up our newsletter and get more events & promotions!"
+    email_holder: "Enter your email here"

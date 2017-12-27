@@ -13,3 +13,9 @@ vi:
     select_lang: "Chọn ngôn ngữ của bạn:"
     item: "món hàng"
     search_holder: "Tìm kiếm sản phẩm..."
+    copy_right: "Bản quyền © 2016 Mike's Company. All Rights Reserved."
+    scroll_top: "Cuộn lên trên"
+    new_letters:
+      title: "Đăng ký nhận thông báo khi có sản phẩm mới"
+      sub_title: "Nhận thư mới của chúng tôi và các khuyến mãi hấp dẫn!"
+    email_holder: "Nhập địa chỉ mail ở đây"
