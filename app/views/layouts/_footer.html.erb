@@ -1,0 +1,46 @@
+<div class="row margin-0">
+  <div class="col-sm-6 padding-0">
+    <div class="block-social">
+      <div class="social">
+        <%= link_to "#" do %>
+          <i class="fa fa-facebook"></i>
+        <% end %>
+        <%= link_to "#" do %>
+            <i class="fa fa-twitter"></i>
+        <% end %>
+        <%= link_to "#" do %>
+            <i class="fa fa-instagram"></i>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6 padding-0">
+    <div class="block-newsletter">
+      <div class="inner">
+        <h2 class="title"><%= t "home_page.new_letters.title" %></h2>
+        <p class="subtitle"><%= t "home_page.new_letters.sub_title" %></p>
+        <%= form_tag nil do %>
+          <%= text_field_tag :subscribe_letters, nil, class: "text-input",
+            placeholder: t("home_page.email_holder") %>
+          <%= button_tag name: :subscribe_button, class: "button" do %>
+            <i class="fa fa-envelope-o"></i>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-bottom">
+      <div class="row">
+        <div class="col-sm-12 col-md-6">
+          <div class="coppyright"><%= t "home_page.copy_right" %></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<%= link_to "#", class: "scroll_top", title: t("home_page.scroll_top") do %>
+  <i class="fa fa-arrow-up"></i>
+<% end %>
