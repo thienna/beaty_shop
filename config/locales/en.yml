@@ -25,6 +25,12 @@ en:
       status:
         new: "New"
         sale: "Sale"
+        instock: "In stock"
+        outstock: "Out of stock"
+      available: "Available:"
+      description: "Description:"
+      select_quantity: "Select Quantity:"
+      title_quantity: "Qty"
     sort:
       default: "Default sorting"
       date: "Sort by newness"

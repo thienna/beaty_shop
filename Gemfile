@@ -25,6 +25,7 @@ gem "mysql2"
 gem "font-awesome-sass", "~> 4.7.0"
 gem "jquery-ui-rails"
 gem "wow-rails"
+gem "kaminari"
 
 group :development, :test do
   gem "sqlite3", "1.3.13"

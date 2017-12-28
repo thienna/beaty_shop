@@ -25,6 +25,12 @@ vi:
       status:
         new: "Mới"
         sale: "Giảm giá"
+        instock: "Sẵn sàng"
+        outstock: "Hết hàng"
+      available: "Còn hàng:"
+      description: "Mô tả:"
+      select_quantity: "Chọn số lượng:"
+      title_quantity: "Qty"
     sort:
       default: "Default sorting"
       date: "Sort by newness"
