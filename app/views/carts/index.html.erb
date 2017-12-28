@@ -1,0 +1,68 @@
+<div class="main-container no-sidebar">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 main-content">
+        <div class="block-form">
+          <table class="shop_table cart">
+            <thead>
+              <tr>
+                <th class="product"><%= t "home_page.cart.product_price" %></th>
+                <th><%= t "home_page.cart.available" %></th>
+                <th><%= t "home_page.cart.quantity" %></th>
+                <th><%= t "home_page.cart.total" %></th>
+                <th><%= t "home_page.cart.remove" %></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="product">
+                  <%= image_tag "products/1.jpg", class: "product-thumb" %>
+                  <div class="product-info">
+                    <h3 class="product-name">
+                      <%= link_to "Stockholm Chair high Mosta gruancy", "#" %>
+                    </h3>
+                    <span class="product-price">$75.00</span>
+                  </div>
+                </td>
+                <td class="stock">
+                  <span class="in-stock">
+                    <%= t "home_page.product.status.instock" %>!
+                  </span>
+                </td>
+                <td>
+                  <div class="quantity">
+                    <%= text_field_tag "quantity",
+                      Settings.quantity.value,
+                      title: t("home_page.product.title_quantity"),
+                      size: Settings.quantity.size, class: "input-text qty text",
+                      data: {min: "", max: ""} %>
+                  </div>
+                </td>
+                <td class="product-subtotal">
+                  <span class="amount">$113.00</span>
+                </td>
+                <td class="product-remove">
+                  <%= link_to "#", class: "remove" do %>
+                    <i class="fa fa-close"></i>
+                  <% end %>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="3"></td>
+                <td colspan="2" class="order-total">
+                  <%= t "home_page.cart.total" %>: $150.00
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="block-form-footer">
+            <%= button_tag t("home_page.button.update_cart"),
+              class: "button", name: "update_cart_button" %>
+            <%= button_tag t("home_page.button.process_order"),
+              class: "button pull-right primary", name: "order_button" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

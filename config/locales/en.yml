@@ -43,3 +43,12 @@ en:
     filter_by_price: "Filter by price"
     price: "Price:"
     currency_unit: "$"
+    cart:
+      total: "Total"
+      quantity: "Quantity"
+      available: "Available"
+      remove: "Remove"
+      product_price:  "Product/Price"
+    button:
+      update_cart: "Update SHOPPING CART"
+      process_order: "Proceed to ORDER"
