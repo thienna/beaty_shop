@@ -43,3 +43,12 @@ vi:
     filter_by_price: "Lọc theo giá"
     price: "Giá:"
     currency_unit: "VNĐ"
+    cart:
+      total: "Thành tiền"
+      quantity: "Số lượng"
+      available: "Tình trạng"
+      remove: "Loại bỏ"
+      product_price: "Sản phẩm/Giá"
+    button:
+      update_cart: "Cập nhật Giỏ Hàng"
+      process_order: "Đến trang Đặt Hàng"
