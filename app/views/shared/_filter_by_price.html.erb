@@ -1,0 +1,16 @@
+<div class="widget widget_price_filter">
+  <h2 class="widget-title"><%= t "home_page.filter_by_price" %></h2>
+  <div class="price_slider_wrapper">
+    <div class="amount-range-price">
+      <%= t "home_page.price" %> <span>$50</span> - <span>$350</span>
+    </div>
+    <div data-label-reasult="<%= t "home_page.price" %>"
+      data-min="0"
+      data-max="500"
+      data-unit="<%= t "home_page.currency_unit" %>"
+      class="slider-range-price "
+      data-value-min="<%= Settings.price.minimum %>"
+      data-value-max="<%= Settings.price.maximum %>">
+    </div>
+  </div>
+</div>

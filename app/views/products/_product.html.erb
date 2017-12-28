@@ -1,0 +1,28 @@
+<li class="product-item col-md-4 col-sm-6 col-xs-12">
+  <div class="product-inner">
+    <div class="thumb has-second-image">
+      <%= link_to "#" do %>
+        <%= image_tag "products/1.jpg" %>
+        <%= image_tag "products/2.jpg", class: "second-image" %>
+      <% end %>
+      <div class="group-button">
+        <%= link_to t("home_page.add_to_cart"), "#",
+          class: "button add_to_cart_button" %>
+      </div>
+      <div class="flash">
+        <span class="new">
+          <%= t "home_page.product.status.new" %>
+        </span>
+      </div>
+      <%= link_to t("home_page.product.quick_view"), "#",
+        title: t("home_page.product.quick_view"),
+        class: "button quick-view yith-wcqv-button" %>
+    </div>
+    <div class="info">
+      <h3 class="product-name short">
+        <%= link_to "Stockholm Chair high Mosta gruancy", "#" %>
+      </h3>
+      <span class="price">$75.00</span>
+    </div>
+  </div>
+</li>

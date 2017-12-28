@@ -19,3 +19,21 @@ en:
       title: "Join Our Newsletter"
       sub_title: "Sign up our newsletter and get more events & promotions!"
     email_holder: "Enter your email here"
+    add_to_cart: "Add to cart"
+    product:
+      quick_view: "Quick view"
+      status:
+        new: "New"
+        sale: "Sale"
+    sort:
+      default: "Default sorting"
+      date: "Sort by newness"
+      name: "Sort by name: A-Z"
+      name_desc: "Sort by name: Z-A"
+      price: "Sort by price: low to high"
+      price_desc: "Sort by price: high to low"
+    category:
+      product: "Product Categories"
+    filter_by_price: "Filter by price"
+    price: "Price:"
+    currency_unit: "$"
