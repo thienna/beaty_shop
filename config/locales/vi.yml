@@ -19,3 +19,21 @@ vi:
       title: "Đăng ký nhận thông báo khi có sản phẩm mới"
       sub_title: "Nhận thư mới của chúng tôi và các khuyến mãi hấp dẫn!"
     email_holder: "Nhập địa chỉ mail ở đây"
+    add_to_cart: "Thêm vào giỏ hàng"
+    product:
+      quick_view: "Xem nhanh"
+      status:
+        new: "Mới"
+        sale: "Giảm giá"
+    sort:
+      default: "Default sorting"
+      date: "Sort by newness"
+      name: "Sort by name: A-Z"
+      name_desc: "Sort by name: Z-A"
+      price: "Sort by price: low to high"
+      price_desc: "Sort by price: high to low"
+    category:
+      product: "Danh mục sản phẩm"
+    filter_by_price: "Lọc theo giá"
+    price: "Giá:"
+    currency_unit: "VNĐ"

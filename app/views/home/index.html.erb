@@ -1,1 +1,24 @@
-<h1 class="text-center"></h1>
+<div class="main-container left-sidebar">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-8 col-md-9 main-content">
+        <div class="shop-page-bar">
+          <div class="page-bar-right">
+            <%= render "shared/sorting" %>
+          </div>
+        </div>
+        <ul class="products product-list-grid
+          desktop-columns-3 tablet-columns-2 mobile-columns-1">
+          <% 5.times do |i| %>
+            <%= render "products/product" %>
+          <% end %>
+        </ul>
+        <%= render "shared/pagination" %>
+      </div>
+      <div class="col-sm-4 col-md-3 sidebar">
+        <%= render "shared/categories" %>
+        <%= render "shared/filter_by_price" %>
+      </div>
+    </div>
+  </div>
+</div>
