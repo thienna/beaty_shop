@@ -1,3 +1,6 @@
 price:
   minimum: 50
   maximum: 350
+quantity:
+  value: 1
+  size: 4

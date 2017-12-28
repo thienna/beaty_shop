@@ -1,0 +1,52 @@
+<div class="main-container left-sidebar">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-8 col-md-9 main-content">
+        <div class="single-product">
+          <div class="row">
+            <div class="col-sm-12 col-md-5">
+              <div class="images kt-images">
+                <div class="kt-main-image">
+                  <%= link_to image_path("products/3.jpg"), class: "zoom" do %>
+                    <%= image_tag "products/3.jpg" %>
+                  <% end %>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-7">
+              <div class="summary">
+                <h1 class="product_title entry-title">
+                  ArchitectMade Oscar Figure
+                </h1>
+                <span class="price">$75.00</span>
+                <p class="stock out-of-stock">
+                  <label><%= t "home_page.product.available" %> </label>
+                  <i class="fa fa-check"></i>
+                  <%= t "home_page.product.status.instock" %>
+                </p>
+                <div class="short-descript">
+                  <p><strong><%= t "home_page.product.description" %> </strong>
+                  Description blah blah
+                </div>
+                <div class="quantity">
+                  <label><%= t "home_page.product.select_quantity" %> </label>
+                  <%= text_field_tag "quantity",
+                    Settings.quantity.value,
+                    title: t("home_page.product.title_quantity"),
+                    size: Settings.quantity.size, class: "input-text qty text",
+                    data: {min: "", max: ""} %>
+                </div>
+                <button type="submit" class="single_add_to_cart_button button alt">
+                  <%= t "home_page.add_to_cart" %>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4 col-md-3 sidebar">
+        <%= render "shared/categories" %>
+      </div>
+    </div>
+  </div>
+</div>
