@@ -2,5 +2,6 @@
  *= require libs
  *= require admin/metisMenu.min
  *= require admin/sb-admin-2.min
+ *= require admin/main.scss
  *= require_self
  */

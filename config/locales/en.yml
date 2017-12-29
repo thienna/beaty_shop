@@ -76,3 +76,25 @@ en:
       remember_me: "Remember me"
       w_login: "Login"
       forgot_pass: "Forgot your password ?"
+  w_dashboard: "Dashboard"
+  w_view_details: "View Details"
+  w_logout: "Logout"
+  w_settings: "Settings"
+  w_orders: "Orders"
+  w_products: "Products"
+  w_categories: "Categories"
+  admin_page:
+    new_order: "New Orders!"
+    title: "Cosmetic Shop Admin"
+    toggle_nav: "Toggle navigation"
+    w_profile: "User Profile"
+    h_search: "Search Order or Product"
+    orders:
+      list: "Order list"
+      add: "Add an Order"
+    products:
+      list: "Product list"
+      add: "Add a Product"
+    categories:
+      list: "Category list"
+      add: "Add a Category"
