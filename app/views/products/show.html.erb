@@ -18,7 +18,9 @@
                 <h1 class="product_title entry-title">
                   ArchitectMade Oscar Figure
                 </h1>
-                <span class="price">$75.00</span>
+                <span class="price">
+                  <%= number_to_currency 75 %>
+                </span>
                 <p class="stock out-of-stock">
                   <label><%= t "home_page.product.available" %> </label>
                   <i class="fa fa-check"></i>
@@ -36,9 +38,8 @@
                     size: Settings.quantity.size, class: "input-text qty text",
                     data: {min: "", max: ""} %>
                 </div>
-                <button type="submit" class="single_add_to_cart_button button alt">
-                  <%= t "home_page.add_to_cart" %>
-                </button>
+                <%= button_tag t("home_page.add_to_cart"),
+                  class: "single_add_to_cart_button button alt" %>
               </div>
             </div>
           </div>

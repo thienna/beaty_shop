@@ -1,4 +1,12 @@
 vi:
+  number:
+    currency:
+      format:
+        delimiter: " "
+        separator: "."
+        unit: "VNĐ"
+        strip_insignificant_zeros: true
+        format: "%n %u"
   home_page:
     hotline: "Đường dây nóng"
     hotline_detail: "Liên hệ 0972 792 096"
@@ -7,8 +15,6 @@ vi:
     shopping_guides: "Hướng dẫn mua hàng"
     main_menu: "Menu Chính"
     shopping_cart: "Xem giỏ hàng"
-    order: "Đặt hàng"
-    sub_total: "Thành tiền"
     item_in_cart: "Bạn có <span class='count'>%{quantity}</span> trong giỏ hàng."
     select_lang: "Chọn ngôn ngữ của bạn:"
     item: "món hàng"
@@ -20,6 +26,8 @@ vi:
       sub_title: "Nhận thư mới của chúng tôi và các khuyến mãi hấp dẫn!"
     email_holder: "Nhập địa chỉ mail ở đây"
     add_to_cart: "Thêm vào giỏ hàng"
+    word_product: "Sản phẩm"
+    word_sub_total: "Đơn giá"
     product:
       quick_view: "Xem nhanh"
       status:
@@ -42,7 +50,6 @@ vi:
       product: "Danh mục sản phẩm"
     filter_by_price: "Lọc theo giá"
     price: "Giá:"
-    currency_unit: "VNĐ"
     cart:
       total: "Thành tiền"
       quantity: "Số lượng"
@@ -52,3 +59,20 @@ vi:
     button:
       update_cart: "Cập nhật Giỏ Hàng"
       process_order: "Đến trang Đặt Hàng"
+      order: "Đặt hàng"
+    order:
+      info_title: "Thông tin đơn hàng của bạn"
+      fill_info: "Điền thông tin liên lạc của bạn"
+      full_name: "Họ và Tên"
+      address: "Địa chỉ"
+      phone: "Số điện thoại"
+      email: "Địa chỉ mail"
+    w_click_here: "Bấm vào đây"
+    sessions:
+      signin: "Đăng nhập"
+      if_have_acc: "Nếu bạn đã có tài khoản hãy nhập email và mật khẩu của bạn để đăng nhập!"
+      ph_email: "Địa chỉ email của bạn"
+      ph_pass: "Mật khẩu của bạn"
+      remember_me: "Ghi nhớ đăng nhập"
+      w_login: "Đăng nhập"
+      forgot_pass: "Quên mật khẩu?"

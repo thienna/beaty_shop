@@ -21,7 +21,9 @@
                     <h3 class="product-name">
                       <%= link_to "Stockholm Chair high Mosta gruancy", "#" %>
                     </h3>
-                    <span class="product-price">$75.00</span>
+                    <span class="product-price">
+                      <%= number_to_currency 75 %>
+                    </span>
                   </div>
                 </td>
                 <td class="stock">
@@ -39,7 +41,9 @@
                   </div>
                 </td>
                 <td class="product-subtotal">
-                  <span class="amount">$113.00</span>
+                  <span class="amount">
+                    <%= number_to_currency 75 %>
+                  </span>
                 </td>
                 <td class="product-remove">
                   <%= link_to "#", class: "remove" do %>
@@ -50,16 +54,17 @@
               <tr>
                 <td colspan="3"></td>
                 <td colspan="2" class="order-total">
-                  <%= t "home_page.cart.total" %>: $150.00
+                  <%= t "home_page.cart.total" %>:
+                  <%= number_to_currency 75 %>
                 </td>
               </tr>
             </tbody>
           </table>
           <div class="block-form-footer">
             <%= button_tag t("home_page.button.update_cart"),
-              class: "button", name: "update_cart_button" %>
+              class: "button", name: :update_cart_button %>
             <%= button_tag t("home_page.button.process_order"),
-              class: "button pull-right primary", name: "order_button" %>
+              class: "button pull-right primary", name: :order_button %>
           </div>
         </div>
       </div>
