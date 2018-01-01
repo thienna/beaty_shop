@@ -1,4 +1,12 @@
 en:
+  number:
+    currency:
+      format:
+        delimiter: ","
+        separator: "."
+        unit: "$"
+        strip_insignificant_zeros: false
+        format: "%u %n"
   home_page:
     hotline: "Hotline"
     hotline_detail: "Contact 0972 792 096"
@@ -7,8 +15,6 @@ en:
     shopping_guides: "Shopping Guides"
     main_menu: "Main Menu"
     shopping_cart: "SHOPPING CART"
-    order: "ORDER"
-    sub_total: "Subtotal:"
     item_in_cart: "You have <span class='count'>%{quantity}</span> in your cart."
     select_lang: "Select your language:"
     item: "item"
@@ -20,6 +26,8 @@ en:
       sub_title: "Sign up our newsletter and get more events & promotions!"
     email_holder: "Enter your email here"
     add_to_cart: "Add to cart"
+    word_product: "Product"
+    word_sub_total: "Sub Total"
     product:
       quick_view: "Quick view"
       status:
@@ -42,7 +50,6 @@ en:
       product: "Product Categories"
     filter_by_price: "Filter by price"
     price: "Price:"
-    currency_unit: "$"
     cart:
       total: "Total"
       quantity: "Quantity"
@@ -52,3 +59,20 @@ en:
     button:
       update_cart: "Update SHOPPING CART"
       process_order: "Proceed to ORDER"
+      order: "Order"
+    order:
+      info_title: "Your Order's information"
+      fill_info: "Fill your contact information"
+      full_name: "Full Name"
+      address: "Address"
+      phone: "Phone"
+      email: "Email"
+    w_click_here: "Click Here"
+    sessions:
+      signin: "Sign in"
+      if_have_acc: "If you have an account please enter the username & password here!"
+      ph_email: "Your email"
+      ph_pass: "Your password"
+      remember_me: "Remember me"
+      w_login: "Login"
+      forgot_pass: "Forgot your password ?"

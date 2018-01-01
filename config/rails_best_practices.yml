@@ -24,7 +24,8 @@ RemoveEmptyHelpersCheck: { }
 #RemoveTabCheck: { }
 RemoveTrailingWhitespaceCheck: { }
 RemoveUnusedMethodsInControllersCheck: { except_methods: [
-  "CartsController#index",
+  "OrdersController#index",
+  "CartsController#show",
   "ProductsController#show",
   "HomeController#index"
 ] }

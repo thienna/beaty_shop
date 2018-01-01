@@ -44,7 +44,9 @@
               <span class="count">0</span>
               <span class="text"><%= t "home_page.item" %></span>
               <span class="kak">-</span>
-              <span class="subtotal">$0.00</span>
+              <span class="subtotal">
+                <%= number_to_currency 0 %>
+              </span>
             <% end %>
             <div class="sub-menu mini-cart-content">
               <div class="content-inner">
@@ -63,7 +65,9 @@
                       <h4 class="product-name">
                         <%= link_to "Stockholm Chair high Mosta gruancy", "#" %>
                       </h4>
-                      <span class="price">1 x $75.00</span>
+                      <span class="price">
+                        1 x <%= number_to_currency 75 %>
+                      </span>
                       <%= link_to "#", class: "remove-item" do %>
                         <i class="fa fa-close"></i>
                       <% end %>
@@ -79,7 +83,9 @@
                       <h4 class="product-name">
                         <%= link_to "Stockholm Chair high Mosta gruancy", "#" %>
                       </h4>
-                      <span class="price">1 x $75.00</span>
+                      <span class="price">
+                        1 x <%= number_to_currency 75 %>
+                      </span>
                       <%= link_to "#", class: "remove-item" do %>
                         <i class="fa fa-close"></i>
                       <% end %>
@@ -88,7 +94,9 @@
                 </ul>
                 <div class="subtotal">
                   <%= t "home_page.sub_total" %>
-                  <span class="amout">$75.00</span>
+                  <span class="amout">
+                    1 x <%= number_to_currency 75 %>
+                  </span>
                 </div>
                 <%= link_to "#", class: "button" do %>
                   <%= t "home_page.shopping_cart" %>
