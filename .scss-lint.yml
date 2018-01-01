@@ -11,3 +11,6 @@ exclude:
   - 'app/assets/stylesheets/Pe-icon-7-stroke.min.css'
   - 'app/assets/stylesheets/chosen.min.css'
   - 'app/assets/stylesheets/color.min.scss'
+  - 'app/assets/stylesheets/admin.css'
+  - 'app/assets/stylesheets/admin/metisMenu.min.css'
+  - 'app/assets/stylesheets/admin/sb-admin-2.min.css'

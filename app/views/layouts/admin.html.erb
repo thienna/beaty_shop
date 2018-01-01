@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= t "home_page.home" %></title>
+
+    <%= render "admin/layouts/include_tag" %>
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <%= render "admin/shared/nav" %>
+      <div id="page-wrapper">
+        <%= yield %>
+      </div>
+    </div>
+  </body>
+</html>
