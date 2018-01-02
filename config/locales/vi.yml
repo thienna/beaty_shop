@@ -76,3 +76,25 @@ vi:
       remember_me: "Ghi nhớ đăng nhập"
       w_login: "Đăng nhập"
       forgot_pass: "Quên mật khẩu?"
+  w_dashboard: "Bảng điều khiển"
+  w_view_details: "Xem chi tiết"
+  w_logout: "Đăng ký"
+  w_settings: "Cài đặt"
+  w_orders: "Đơn hàng"
+  w_products: "Sản phẩm"
+  w_categories: "Danh mục"
+  admin_page:
+    new_order: "Đơn hàng mới!"
+    title: "Trang quản trị"
+    toggle_nav: "Chuyển đổi điều hướng"
+    w_profile: "Hồ sơ cá nhân"
+    h_search: "Tìm kiếm đơn hàng hoặc sản phẩm"
+    orders:
+      list: "Danh sách đơn hàng"
+      add: "Thêm đơn hàng"
+    products:
+      list: "Danh sách sản phẩm"
+      add: "Thêm sản phẩm"
+    categories:
+      list: "Danh sách danh mục"
+      add: "Thêm danh mục"

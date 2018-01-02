@@ -1,1 +1,96 @@
-<h1><%= t "home_page.w_click_here" %></h1>
+<nav class="navbar navbar-default navbar-static-top" role="navigation">
+  <div class="navbar-header">
+    <%= button_tag name: nil, type: :button, class: "navbar-toggle",
+      data: {toggle: "collapse", target: ".navbar-collapse"} do %>
+        <span class="sr-only"><%= t "admin_page.toggle_nav" %></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+    <% end %>
+    <%= link_to t("admin_page.title"), "#", class: "navbar-brand" %>
+  </div>
+
+  <ul class="nav navbar-top-links navbar-right">
+    <li class="dropdown">
+      <%= link_to "#", class: "dropdown-toggle", data: {toggle: "dropdown"} do %>
+        <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+      <% end %>
+      <ul class="dropdown-menu dropdown-user">
+        <li>
+          <%= link_to "#" do %>
+            <i class="fa fa-user fa-fw"></i> <%= t "admin_page.w_profile" %>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to "#" do %>
+            <i class="fa fa-gear fa-fw"></i> <%= t "w_settings" %>
+          <% end %>
+        </li>
+        <li class="divider"></li>
+        <li>
+          <%= link_to "#" do %>
+            <i class="fa fa-sign-out fa-fw"></i> <%= t "w_logout" %>
+          <% end %>
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+  <div class="navbar-default sidebar" role="navigation">
+    <div class="sidebar-nav navbar-collapse collapse">
+      <ul class="nav" id="side-menu">
+        <%= render "admin/shared/sidebar_search" %>
+        <li>
+          <%= link_to "#" do %>
+            <i class="fa fa-dashboard fa-fw"></i> <%= t "w_dashboard" %>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to "#" do %>
+            <i class="fa fa-clone fa-fw"></i>
+              <%= t "w_orders" %>
+            <span class="fa arrow"></span>
+          <% end %>
+          <ul class="nav nav-second-level">
+            <li>
+              <%= link_to t("admin_page.orders.list"), "#" %>
+            </li>
+            <li>
+              <%= link_to t("admin_page.orders.add"), "#" %>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <%= link_to "#" do %>
+            <i class="fa fa-product-hunt fa-fw"></i>
+              <%= t "w_products" %>
+            <span class="fa arrow"></span>
+          <% end %>
+          <ul class="nav nav-second-level">
+            <li>
+              <%= link_to t("admin_page.products.list"), "#" %>
+            </li>
+            <li>
+              <%= link_to t("admin_page.products.add"), "#" %>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <%= link_to "#" do %>
+            <i class="fa fa-book fa-fw"></i>
+              <%= t "w_categories" %>
+            <span class="fa arrow"></span>
+          <% end %>
+          <ul class="nav nav-second-level">
+            <li>
+              <%= link_to t("admin_page.categories.list"), "#" %>
+            </li>
+            <li>
+              <%= link_to t("admin_page.categories.add"), "#" %>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
