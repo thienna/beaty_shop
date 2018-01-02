@@ -89,6 +89,9 @@ vi:
     toggle_nav: "Chuyển đổi điều hướng"
     w_profile: "Hồ sơ cá nhân"
     h_search: "Tìm kiếm đơn hàng hoặc sản phẩm"
+    w_action: "Hành động"
+    w_edit: "Sửa"
+    w_delete: "Xoá"
     orders:
       list: "Danh sách đơn hàng"
       add: "Thêm đơn hàng"
@@ -98,3 +101,17 @@ vi:
     categories:
       list: "Danh sách danh mục"
       add: "Thêm danh mục"
+      edit: "Sửa thư mục"
+      h_add:
+        name: "Nhập tên danh mục"
+        desc: "Nhập mô tả danh mục"
+    table:
+      head:
+        name: "Tên"
+        desc: "Mô tả"
+      h_search: "Tìm trong bảng"
+    button:
+      create:
+        category: "Tạo danh mục"
+      edit:
+        category: "Cập nhật danh mục"

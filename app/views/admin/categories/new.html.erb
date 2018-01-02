@@ -1,0 +1,34 @@
+<div class="row">
+  <div class="col-lg-12">
+    <h1 class="page-header"><%= t "w_categories" %></h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-12">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <%= t "admin_page.categories.add" %>
+      </div>
+      <div class="panel-body">
+        <div class="row">
+          <div class="col-lg-6">
+            <%= form_tag nil do %>
+              <div class="form-group">
+                <%= label_tag :category_name, t("admin_page.table.head.name") %>
+                <%= text_field_tag :category_name, nil, class: "form-control",
+                  placeholder: t("admin_page.categories.h_add.name") %>
+              </div>
+              <div class="form-group">
+                <%= label_tag :category_desc, t("admin_page.table.head.desc") %>
+                <%= text_area_tag :category_desc, nil, class: "form-control",
+                  placeholder: t("admin_page.categories.h_add.desc") %>
+              </div>
+              <%= button_tag t("admin_page.button.create.category"),
+                class: "btn btn-outline btn-primary" %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
