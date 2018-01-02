@@ -1,4 +1,8 @@
 vi:
+  languages:
+    pick: "Chọn ngôn ngữ:"
+    viet: "Tiếng Việt"
+    anh: "Tiếng Anh"
   number:
     currency:
       format:
@@ -35,7 +39,7 @@ vi:
         sale: "Giảm giá"
         instock: "Sẵn sàng"
         outstock: "Hết hàng"
-      available: "Còn hàng:"
+      available: "Trạng thái:"
       description: "Mô tả:"
       select_quantity: "Chọn số lượng:"
       title_quantity: "Qty"
@@ -92,12 +96,24 @@ vi:
     w_action: "Hành động"
     w_edit: "Sửa"
     w_delete: "Xoá"
+    w_price: "Giá"
+    w_quantity: "Số lượng"
+    w_price_sale: "Giá Sale"
+    w_picture: "Ảnh"
     orders:
       list: "Danh sách đơn hàng"
       add: "Thêm đơn hàng"
     products:
       list: "Danh sách sản phẩm"
       add: "Thêm sản phẩm"
+      edit: "Sửa sản phẩm"
+      show: "Hiển thị sản phẩm"
+      h_:
+        name: "Nhập tên sản phẩm"
+        desc: "Nhập mô tả sản phẩm"
+        price: "Nhập giá sản phẩm"
+        price_sale: "Nhập giá sale sản phẩm"
+        quantity: "Nhập số lượng sản phẩm"
     categories:
       list: "Danh sách danh mục"
       add: "Thêm danh mục"
@@ -113,5 +129,7 @@ vi:
     button:
       create:
         category: "Tạo danh mục"
+        product: "Tạo sản phẩm"
       edit:
         category: "Cập nhật danh mục"
+        product: "Cập nhật sản phẩm"

@@ -1,0 +1,30 @@
+<%= form_tag nil do %>
+  <div class="form-group">
+    <%= label_tag :product_name, t("admin_page.table.head.name") %>
+    <%= text_field_tag :product_name, nil, class: "form-control",
+      placeholder: t("admin_page.products.h_.name") %>
+  </div>
+  <div class="form-group">
+    <%= label_tag :product_quantity, t("admin_page.w_quantity") %>
+    <%= number_field_tag :product_quantity, nil, class: "form-control",
+      placeholder: t("admin_page.products.h_.quantity") %>
+  </div>
+  <div class="form-group">
+    <%= label_tag :product_price, t("admin_page.w_price") %>
+    <%= number_field_tag :product_price, nil, class: "form-control",
+      placeholder: t("admin_page.products.h_.price") %>
+  </div>
+  <div class="form-group">
+    <%= label_tag :product_price_sale, t("admin_page.w_price_sale") %>
+    <%= number_field_tag :product_price_sale, nil, class: "form-control",
+      placeholder: t("admin_page.products.h_.price_sale") %>
+  </div>
+  <div class="form-group">
+    <%= label_tag :product_picture, t("admin_page.w_picture") %>
+    <%= file_field_tag :product_picture, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= label_tag :product_desc, t("admin_page.table.head.desc") %>
+    <%= cktext_area_tag :product_desc %>
+  </div>
+<% end %>

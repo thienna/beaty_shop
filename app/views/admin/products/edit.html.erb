@@ -1,0 +1,26 @@
+<div class="row">
+  <div class="col-lg-12">
+    <h1 class="page-header"><%= t "w_products" %></h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-12">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <%= t "admin_page.products.edit" %>
+      </div>
+      <div class="panel-body">
+        <div class="row">
+          <div class="col-lg-6">
+            <%= render "admin/shared/form_product" %>
+            <%= button_tag t("admin_page.button.edit.product"),
+              class: "btn btn-outline btn-success" %>
+          </div>
+          <div class="col-lg-6 text-center mike-admin-product-img">
+            <%= image_tag "products/1.jpg" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

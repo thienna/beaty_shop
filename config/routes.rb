@@ -4,6 +4,8 @@ Rails.application.routes.draw do
       root "dashboard#index"
       resource :category, only: :edit
       resources :categories, only: %i(index new)
+      resource :product, only: :edit
+      resources :products, only: %i(index new)
     end
 
     root "home#index"

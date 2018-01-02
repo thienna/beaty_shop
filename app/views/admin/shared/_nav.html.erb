@@ -39,7 +39,6 @@
   <div class="navbar-default sidebar" role="navigation">
     <div class="sidebar-nav navbar-collapse collapse">
       <ul class="nav" id="side-menu">
-        <%= render "admin/shared/sidebar_search" %>
         <li>
           <%= link_to "#" do %>
             <i class="fa fa-dashboard fa-fw"></i> <%= t "w_dashboard" %>
@@ -90,6 +89,7 @@
             </li>
           </ul>
         </li>
+        <%= render "admin/shared/sidebar_langs" %>
       </ul>
     </div>
   </div>
