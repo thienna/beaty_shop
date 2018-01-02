@@ -96,13 +96,32 @@ vi:
     w_action: "Hành động"
     w_edit: "Sửa"
     w_delete: "Xoá"
+    w_update: "Cập nhật"
     w_price: "Giá"
     w_quantity: "Số lượng"
     w_price_sale: "Giá Sale"
     w_picture: "Ảnh"
+    w_id: "Mã"
+    w_total_price: "Thành tiền"
+    w_status: "Trạng thái"
+    w_product_name: "Tên sản phẩm"
+    w_product_id: "Mã sản phẩm"
+    w_unit_price: "Đơn giá"
+    w_customer:
+      name: "Tên KH"
+      address: "Địa chỉ"
+      phone: "SĐT"
+      email: "Địa chỉ email"
     orders:
       list: "Danh sách đơn hàng"
       add: "Thêm đơn hàng"
+      edit: "Sửa đơn hàng"
+      details: "Thông tin chi tiết đơn hàng"
+      h_:
+        name: "Nhập tên khách hàng"
+        email: "Nhập email khách hàng"
+        address: "Nhập địa chỉ khách hàng"
+        phone: "Nhập số điện thoại khách hàng"
     products:
       list: "Danh sách sản phẩm"
       add: "Thêm sản phẩm"
@@ -133,3 +152,4 @@ vi:
       edit:
         category: "Cập nhật danh mục"
         product: "Cập nhật sản phẩm"
+        order: "Cập nhật đơn hàng"

@@ -1,0 +1,9 @@
+<tr>
+  <td><%= t "admin_page.w_id" %></td>
+  <td><%= t "admin_page.w_customer.name" %></td>
+  <td><%= t "admin_page.table.head.name" %></td>
+  <td class="mike-select-qty"><%= number_field_tag :order_detail_quantity,
+    Settings.quantity.value %></td>
+  <td><%= t "admin_page.w_price" %></td>
+  <%= render "admin/shared/list_action" %>
+</tr>

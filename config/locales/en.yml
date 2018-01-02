@@ -96,13 +96,32 @@ en:
     w_action: "Action"
     w_edit: "Edit"
     w_delete: "Delete"
+    w_update: "Update"
     w_price: "Price"
     w_quantity: "Quantity"
     w_price_sale: "Price Sale"
     w_picture: "Picture"
+    w_id: "Id"
+    w_total_price: "Total Price"
+    w_status: "Status"
+    w_product_name: "Product Name"
+    w_product_id: "Product Id"
+    w_unit_price: "Unit Price"
+    w_customer:
+      name: "Customer Name"
+      address: "Address"
+      phone: "Phone"
+      email: "Email"
     orders:
       list: "Order list"
       add: "Add an Order"
+      edit: "Edit an Order"
+      details: "Order details"
+      h_:
+        name: "Enter customer name"
+        email: "Enter customer email"
+        address: "Enter customer address"
+        phone: "Enter customer phone"
     products:
       list: "Product list"
       add: "Add a Product"
@@ -133,3 +152,4 @@ en:
       edit:
         category: "Update Category"
         product: "Update Product"
+        order: "Update Order"
