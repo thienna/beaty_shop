@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   scope "(:locale)", locale: /en|vi/ do
     namespace :admin do
       root "dashboard#index"
+      resource :category, only: :edit
+      resources :categories, only: %i(index new)
     end
 
     root "home#index"

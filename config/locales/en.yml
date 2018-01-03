@@ -89,6 +89,9 @@ en:
     toggle_nav: "Toggle navigation"
     w_profile: "User Profile"
     h_search: "Search Order or Product"
+    w_action: "Action"
+    w_edit: "Edit"
+    w_delete: "Delete"
     orders:
       list: "Order list"
       add: "Add an Order"
@@ -98,3 +101,17 @@ en:
     categories:
       list: "Category list"
       add: "Add a Category"
+      edit: "Edit a Category"
+      h_add:
+        name: "Enter category name"
+        desc: "Enter category description"
+    table:
+      head:
+        name: "Name"
+        desc: "Description"
+      h_search: "Search in table"
+    button:
+      create:
+        category: "Create Category"
+      edit:
+        category: "Update Category"
