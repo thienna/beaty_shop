@@ -1,4 +1,8 @@
 en:
+  languages:
+    pick: "Choose a language"
+    viet: "Vietnamese"
+    anh: "English"
   number:
     currency:
       format:
@@ -92,12 +96,24 @@ en:
     w_action: "Action"
     w_edit: "Edit"
     w_delete: "Delete"
+    w_price: "Price"
+    w_quantity: "Quantity"
+    w_price_sale: "Price Sale"
+    w_picture: "Picture"
     orders:
       list: "Order list"
       add: "Add an Order"
     products:
       list: "Product list"
       add: "Add a Product"
+      edit: "Edit a Product"
+      show: "Showing Product"
+      h_:
+        name: "Enter product name"
+        desc: "Enter product description"
+        price: "Enter product price"
+        price_sale: "Enter product discount"
+        quantity: "Enter product quantity"
     categories:
       list: "Category list"
       add: "Add a Category"
@@ -113,5 +129,7 @@ en:
     button:
       create:
         category: "Create Category"
+        product: "Create Product"
       edit:
         category: "Update Category"
+        product: "Update Product"

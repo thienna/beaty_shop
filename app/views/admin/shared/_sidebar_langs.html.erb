@@ -1,0 +1,7 @@
+<li class="mike-admin-langs">
+  <h6 class="title"><%= t "languages.pick" %>:</h6>
+  <%= link_to t("languages.viet"),
+    url_for(locale: :vi), class: "btn btn-default btn-xs" %>
+  <%= link_to t("languages.anh"),
+    url_for(locale: :en), class: "btn btn-default btn-xs" %>
+</li>
