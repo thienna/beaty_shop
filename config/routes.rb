@@ -6,6 +6,8 @@ Rails.application.routes.draw do
       resources :categories, only: %i(index new)
       resource :product, only: :edit
       resources :products, only: %i(index new)
+      resource :order, only: :edit
+      resources :orders, only: :index
     end
 
     root "home#index"

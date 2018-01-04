@@ -1,10 +1,10 @@
 <tr>
   <td><%= t "admin_page.w_id" %></td>
-  <td class="text-center mike-table-img"><%= image_tag "products/1.jpg" %></td>
+  <td><%= t "admin_page.w_customer.name" %></td>
   <td><%= t "admin_page.table.head.name" %></td>
   <td><%= t "admin_page.table.head.desc" %></td>
   <td><%= t "admin_page.w_price" %></td>
   <td><%= t "admin_page.w_quantity" %></td>
-  <td><%= t "admin_page.w_price_sale" %></td>
+  <%= render "admin/shared/list_label", status: :done %>
   <%= render "admin/shared/list_action" %>
 </tr>

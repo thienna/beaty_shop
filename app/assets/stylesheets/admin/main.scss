@@ -1,3 +1,13 @@
+$mike-red: #d9534f;
+$mike-bg-red: #d43f3a;
+$mike-w: #fff;
+$mike-y: #f0ad4e;
+$mike-bg-y: #eea236;
+$mike-g: #4cae4c;
+$mike-g-bg: #5cb85c;
+$mike-b: #5bc0de;
+$mike-b-bg: #46b8da;
+
 .navbar.navbar-default.navbar-static-top {
   margin-bottom: 0;
 }
@@ -25,4 +35,54 @@
     padding: 5px;
     width: 45%;
   }
+}
+
+.mike-label {
+  border-radius: 5px;
+  color: $mike-w;
+  text-transform: capitalize;
+
+  &.label-pending {
+    background-color: $mike-y;
+    border-color: $mike-bg-y;
+  }
+
+  &.label-confirmed {
+    background-color: $mike-b;
+    border-color: $mike-b-bg;
+  }
+
+  &.label-rejected {
+    background-color: $mike-red;
+    border-color: $mike-bg-red;
+  }
+
+  &.label-done {
+    background-color: $mike-g-bg;
+    border-color: $mike-g;
+  }
+}
+
+.mike-action {
+  border-radius: 5px;
+  color: $mike-w;
+  display: inline-block;
+  padding: 5px 10px;
+
+  &.mike-action-delete {
+    background-color: $mike-red;
+  }
+
+  &.mike-action-edit {
+    background-color: $mike-y;
+  }
+
+  &:hover {
+    color: $mike-w;
+    opacity: .75;
+  }
+}
+
+.mike-select-qty input {
+  max-width: 35px;
 }
