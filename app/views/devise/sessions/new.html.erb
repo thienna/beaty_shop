@@ -1,0 +1,31 @@
+<div class="main-container no-sidebar no-padding">
+  <div class="container">
+    <div class="text-center form-authentication">
+      <div class="form-login">
+        <h3 class="title"><%= t "home_page.sessions.signin" %></h3>
+        <%= form_for resource, as: resource_name,
+          url: session_path(resource_name) do |f| %>
+          <p><%= t "home_page.sessions.if_have_acc" %></p>
+          <p>
+            <%= f.email_field :email,
+              placeholder: t("home_page.sessions.ph_email") %>
+          </p>
+          <p>
+            <%= f.password_field :password,
+              placeholder: t("home_page.sessions.ph_pass") %>
+          </p>
+          <%= f.label :remember_me, class: "inline" do %>
+            <%= f.check_box :remember_me %>
+            <%= t "home_page.sessions.remember_me" %>
+          <% end %>
+          <%= f.submit t("home_page.sessions.w_login"),
+            class: "button primary" %>
+        <% end %>
+      </div>
+    </div>
+    <div class="form-authentication-footer">
+      <%= t "home_page.sessions.forgot_pass" %>
+      <%= link_to t("home_page.w_click_here"), "#" %>
+    </div>
+  </div>
+</div>

@@ -12,8 +12,10 @@ Rails.application.routes.draw do
 
     root "home#index"
     get "/product", to: "products#show"
-    get "/login", to: "sessions#new"
     resource :cart, only: :show
     resources :orders, only: :index
+
+    devise_for :user, path: "",
+      path_names: {sign_in: "login", sign_out: "logout"}
   end
 end

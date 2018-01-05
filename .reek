@@ -4,3 +4,10 @@ IrresponsibleModule:
 exclude_paths:
   - 'vendor'
   - 'db/migrate'
+
+PrimaDonnaMethod:
+  enabled: false
+
+UnusedParameters:
+  exclude:
+    - "ApplicationController#after_sign_in_path_for"
