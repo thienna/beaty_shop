@@ -1,10 +1,22 @@
 <tr>
-  <td><%= t "admin_page.w_id" %></td>
-  <td class="text-center mike-table-img"><%= image_tag "products/1.jpg" %></td>
-  <td><%= t "admin_page.table.head.name" %></td>
-  <td><%= t "admin_page.table.head.desc" %></td>
-  <td><%= t "admin_page.w_price" %></td>
-  <td><%= t "admin_page.w_quantity" %></td>
-  <td><%= t "admin_page.w_price_sale" %></td>
-  <%= render "admin/shared/list_action" %>
+  <td class="text-center"><%= product.id %></td>
+  <td class="text-center mike-table-img">
+    <%= product.picture ? image_tag(product.picture.url)
+      : image_tag("no-img.jpeg") %>
+  </td>
+  <td class="text-center"><%= product.name %></td>
+  <td class="text-center"><%= number_to_currency product.price %></td>
+  <td class="text-center"><%= product.quantity %></td>
+  <td class="text-center"><%= product.price_sale %></td>
+  <td class="text-center">
+    <%= link_to edit_admin_product_path(product),
+      class: "mike-action mike-action-edit" do %>
+      <i class="fa fa-pencil"></i>
+    <% end %>
+    <%= link_to admin_product_path(product), method: :delete,
+      class: "mike-action mike-action-delete",
+      data: {confirm: t("admin_page.button.confirm_delete")} do %>
+      <i class="fa fa-times"></i>
+    <% end %>
+  </td>
 </tr>

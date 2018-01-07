@@ -27,7 +27,6 @@
               <th class="text-center"><%= t "admin_page.w_id" %></th>
               <th class="text-center"><%= t "admin_page.w_picture" %></th>
               <th class="text-center"><%= t "admin_page.table.head.name" %></th>
-              <th class="text-center"><%= t "admin_page.table.head.desc" %></th>
               <th class="text-center"><%= t "admin_page.w_price" %></th>
               <th class="text-center"><%= t "admin_page.w_quantity" %></th>
               <th class="text-center"><%= t "admin_page.w_price_sale" %></th>
@@ -35,9 +34,16 @@
             </tr>
           </thead>
           <tbody>
-            <%= render "admin/products/product" %>
+            <% if @products.any? %>
+              <%= render @products %>
+            <% else %>
+              <%= t "admin_page.w_no_record" %>
+            <% end %>
           </tbody>
         </table>
+        <div>
+          <%= paginate @products %>
+        </div>
       </div>
     </div>
   </div>
