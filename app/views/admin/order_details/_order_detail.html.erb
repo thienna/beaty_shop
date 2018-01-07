@@ -4,22 +4,24 @@
   <td class="text-center">
     <%= number_to_currency order_detail.product.price %>
   </td>
-  <td class="text-center mike-select-qty">
-    <%= number_field_tag :order_detail_quantity,
-      Settings.quantity.value %>
-  </td>
-  <td class="text-center">
-    <%= number_to_currency order_detail.unit_price %>
-  </td>
-  <td class="text-center">
-    <%= link_to "#",
-      class: "mike-action mike-action-edit" do %>
-        <i class="fa fa-check"></i>
-    <% end %>
-    <%= link_to "#", method: :delete,
-      class: "mike-action mike-action-delete",
-      data: {confirm: t("admin_page.button.confirm_delete")} do %>
-        <i class="fa fa-trash-o"></i>
-    <% end %>
-  </td>
+    <td class="text-center mike-select-qty">
+      <%= form_for [:admin, order_detail] do |f| %>
+        <%= f.number_field :quantity %>
+      <% end %>
+    </td>
+    <td class="text-center">
+      <%= number_to_currency order_detail.unit_price %>
+    </td>
+    <td class="text-center">
+      <%= button_tag type: :submit,
+        class: "mike-action mike-action-edit",
+          form: "edit_order_detail_#{order_detail.id}" do %>
+          <i class="fa fa-check"></i>
+      <% end %>
+      <%= link_to admin_order_detail_path(order_detail), method: :delete,
+        class: "mike-action mike-action-delete",
+        data: {confirm: t("admin_page.button.confirm_delete")} do %>
+          <i class="fa fa-trash-o"></i>
+      <% end %>
+    </td>
 </tr>

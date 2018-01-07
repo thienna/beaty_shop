@@ -154,6 +154,12 @@ vi:
       edit: "Sửa đơn hàng"
       details: "Thông tin chi tiết đơn hàng"
       find_failed: "Không tìm thấy đơn hàng"
+      form:
+        status:
+          pending: "Khởi tạo"
+          confirmed: "Đã xác nhận"
+          rejected: "Đã từ chối"
+          done: "Hoàn thành"
       action:
         create:
           success: "Tạo đơn hàng thành công!"
@@ -164,6 +170,9 @@ vi:
         update:
           success: "Cập nhật đơn hàng thành công!"
           failed: "Cập nhật đơn hàng thất bại."
+        filter:
+          status: "Lọc đơn hàng theo trạng thái"
+        status_not_accept: "Đơn hàng đang trong trạng thái không được thay đổi."
       h_:
         name: "Nhập tên khách hàng"
         email: "Nhập email khách hàng"

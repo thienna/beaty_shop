@@ -1,11 +1,12 @@
 class Admin::OrdersController < Admin::BaseController
-  attr_reader :order
+  attr_reader :order, :search
 
   before_action :load_statuses, only: %i(index update)
   before_action :find_order, only: %i(show update destroy)
 
   def index
-    @orders = Order.page params[:page]
+    @search = Order.newest.ransack params[:q]
+    @orders = search.result.page params[:page]
   end
 
   def show

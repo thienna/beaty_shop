@@ -7,10 +7,10 @@
       "check_name": "Render",
       "message": "Render path contains parameter value",
       "file": "app/views/admin/products/index.html.erb",
-      "line": 53,
+      "line": 62,
       "link": "https://brakemanscanner.org/docs/warning_types/dynamic_render_path/",
       "code": "render(action => search.result.page(params[:page]), {})",
-      "render_path": [{"type":"controller","class":"Admin::ProductsController","method":"index","line":9,"file":"app/controllers/admin/products_controller.rb"}],
+      "render_path": [{"type":"controller","class":"Admin::ProductsController","method":"index","line":11,"file":"app/controllers/admin/products_controller.rb"}],
       "location": {
         "type": "template",
         "template": "admin/products/index"
@@ -18,8 +18,46 @@
       "user_input": "params[:page]",
       "confidence": "Weak",
       "note": ""
+    },
+    {
+      "warning_type": "Dynamic Render Path",
+      "warning_code": 15,
+      "fingerprint": "af88929b381a8d9235b2fe67397f0f2de334aa3de9084b3962535fd1f7e210f1",
+      "check_name": "Render",
+      "message": "Render path contains parameter value",
+      "file": "app/views/admin/orders/show.html.erb",
+      "line": 29,
+      "link": "https://brakemanscanner.org/docs/warning_types/dynamic_render_path/",
+      "code": "render(action => order.order_details.page(params[:page]), {})",
+      "render_path": [{"type":"controller","class":"Admin::OrdersController","method":"show","line":14,"file":"app/controllers/admin/orders_controller.rb"}],
+      "location": {
+        "type": "template",
+        "template": "admin/orders/show"
+      },
+      "user_input": "params[:page]",
+      "confidence": "Weak",
+      "note": ""
+    },
+    {
+      "warning_type": "Dynamic Render Path",
+      "warning_code": 15,
+      "fingerprint": "d3bc2eff515967f43d8d9693369ef72cc46ede173c9c56a8900594b84bb8498f",
+      "check_name": "Render",
+      "message": "Render path contains parameter value",
+      "file": "app/views/admin/orders/index.html.erb",
+      "line": 76,
+      "link": "https://brakemanscanner.org/docs/warning_types/dynamic_render_path/",
+      "code": "render(action => search.result.page(params[:page]), { :statuses => Order.statuses })",
+      "render_path": [{"type":"controller","class":"Admin::OrdersController","method":"index","line":10,"file":"app/controllers/admin/orders_controller.rb"}],
+      "location": {
+        "type": "template",
+        "template": "admin/orders/index"
+      },
+      "user_input": "params[:page]",
+      "confidence": "Weak",
+      "note": ""
     }
   ],
-  "updated": "2018-01-10 08:31:56 +0700",
+  "updated": "2018-01-17 17:52:21 +0700",
   "brakeman_version": "4.1.1"
 }
