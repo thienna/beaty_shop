@@ -10,5 +10,7 @@ module Shop
 
     config.assets.enabled = true
     config.assets.paths << Rails.root.join("/app/assets/fonts")
+    config.time_zone = "Hanoi"
+    config.action_view.embed_authenticity_token_in_remote_forms = true
   end
 end

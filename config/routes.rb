@@ -4,8 +4,7 @@ Rails.application.routes.draw do
       root "dashboard#index"
       resources :categories, only: %i(index new create edit update destroy)
       resources :products, only: %i(index new create edit update destroy)
-      resource :order, only: :edit
-      resources :orders, only: :index
+      resources :orders, only: %i(index show update destroy)
     end
 
     root "home#index"

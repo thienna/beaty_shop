@@ -21,21 +21,28 @@
       <div class="panel-body">
         <table class="table table-striped table-bordered table-hover">
           <thead>
-          <tr>
-            <th class="text-center"><%= t "admin_page.w_id" %></th>
-            <th class="text-center"><%= t "admin_page.w_customer.name" %></th>
-            <th class="text-center"><%= t "admin_page.w_customer.address" %></th>
-            <th class="text-center"><%= t "admin_page.w_customer.phone" %></th>
-            <th class="text-center"><%= t "admin_page.w_customer.email" %></th>
-            <th class="text-center"><%= t "admin_page.w_total_price" %></th>
-            <th class="text-center"><%= t "admin_page.w_status" %></th>
-            <th class="text-center"><%= t "admin_page.w_action" %></th>
-          </tr>
+            <tr>
+              <th class="text-center"><%= t "admin_page.w_id" %></th>
+              <th class="text-center"><%= t "admin_page.w_customer.name" %></th>
+              <th class="text-center"><%= t "admin_page.w_customer.address" %></th>
+              <th class="text-center"><%= t "admin_page.w_customer.phone" %></th>
+              <th class="text-center"><%= t "admin_page.w_customer.email" %></th>
+              <th class="text-center"><%= t "admin_page.w_total_price" %></th>
+              <th class="text-center"><%= t "admin_page.w_status" %></th>
+              <th class="text-center"><%= t "admin_page.w_action" %></th>
+            </tr>
           </thead>
           <tbody>
-            <%= render "admin/orders/order" %>
+            <% if @orders.any? %>
+              <%= render @orders, statuses: @statuses %>
+            <% else %>
+              <%= t "admin_page.w_no_record" %>
+            <% end %>
           </tbody>
         </table>
+        <div>
+          <%= paginate @orders %>
+        </div>
       </div>
     </div>
   </div>

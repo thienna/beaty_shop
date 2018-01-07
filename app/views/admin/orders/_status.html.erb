@@ -1,0 +1,6 @@
+<%= form_for [:admin, order], remote: true do |f| %>
+  <%= f.select :status,
+    options_for_select(order_status_list(statuses),
+      order.status), {},
+      class: "form-control select-order-status" %>
+<% end %>

@@ -10,7 +10,9 @@
     <div id="wrapper">
       <%= render "admin/shared/nav" %>
       <div id="page-wrapper">
-        <%= render "shared/flash_messages" %>
+        <div id="mike-flash">
+          <%= render "shared/flash_messages" %>
+        </div>
         <%= yield %>
       </div>
     </div>
