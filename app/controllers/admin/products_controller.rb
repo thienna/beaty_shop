@@ -1,11 +1,13 @@
 class Admin::ProductsController < Admin::BaseController
-  attr_reader :product
+  attr_reader :product, :search
 
   before_action :load_categories, only: %i(new edit)
   before_action :find_product, only: %i(edit update destroy)
 
   def index
-    @products = Product.newest.page params[:page]
+    @categories = Category.all
+    @search = Product.newest.ransack params[:q]
+    @products = search.result.page params[:page]
   end
 
   def new

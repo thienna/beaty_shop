@@ -173,6 +173,8 @@ vi:
         update:
           success: "Cập nhật sản phẩm thành công!"
           failed: "Cập nhật sản phẩm thất bại."
+        filter:
+          category: "Lọc theo danh mục:"
       h_:
         name: "Nhập tên sản phẩm"
         desc: "Nhập mô tả sản phẩm"
@@ -205,6 +207,9 @@ vi:
         desc: "Mô tả"
       h_search: "Tìm trong bảng"
     button:
+      search: "Tìm kiếm"
+      filter: "Lọc"
+      h_search: "Chọn một mục"
       create:
         category: "Tạo danh mục"
         product: "Tạo sản phẩm"

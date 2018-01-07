@@ -27,6 +27,7 @@ gem "jquery-ui-rails"
 gem "wow-rails"
 gem "kaminari"
 gem "ckeditor"
+gem "ransack"
 
 group :development, :test do
   gem "sqlite3", "1.3.13"
