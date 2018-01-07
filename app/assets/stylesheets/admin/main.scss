@@ -86,3 +86,47 @@ $mike-b-bg: #46b8da;
 .mike-select-qty input {
   max-width: 35px;
 }
+
+.pagination {
+  display: block;
+  margin: auto;
+  text-align: center;
+
+  > span {
+    display: inline-block;
+    margin: 0 10px;
+  }
+}
+
+.alert {
+  animation: flash-message 5s forwards 3s;
+  left: 12%;
+  position: absolute;
+  top: 25%;
+  width: 80%;
+  z-index: 9999;
+}
+
+@keyframes flash-message {
+  0% {
+    opacity: 1;
+    z-index: 9999;
+  }
+
+  100% {
+    opacity: 0;
+    z-index: -9999;
+  }
+}
+
+.error-explanation {
+  color: $mike-red;
+  font-style: italic;
+  margin-left: 5px;
+  margin-top: 8px;
+
+  ul {
+    color: $mike-red;
+    margin: 0 0 30px;
+  }
+}

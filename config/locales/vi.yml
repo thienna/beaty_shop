@@ -1,4 +1,13 @@
 vi:
+  views:
+    pagination:
+      truncate: "..."
+      next: "Trang tiếp theo ›"
+      last: "Trang cuối »"
+      previous: "‹ Trang trước"
+      first: "« Trang đầu"
+  errors:
+    format: "%{attribute} %{message}"
   languages:
     pick: "Chọn ngôn ngữ:"
     viet: "Tiếng Việt"
@@ -137,6 +146,18 @@ vi:
       list: "Danh sách danh mục"
       add: "Thêm danh mục"
       edit: "Sửa thư mục"
+      find_failed: "Không tìm thấy danh mục"
+      nothing: "Không có category nào!"
+      action:
+        create:
+          success: "Tạo danh mục thành công!"
+          failed: "Tạo danh mục thất bại."
+        destroy:
+          success: "Xoá danh mục thành công!"
+          failed: "Xoá danh mục thất bại."
+        update:
+          success: "Cập nhật danh mục thành công!"
+          failed: "Cập nhật danh mục thất bại."
       h_add:
         name: "Nhập tên danh mục"
         desc: "Nhập mô tả danh mục"
@@ -153,3 +174,4 @@ vi:
         category: "Cập nhật danh mục"
         product: "Cập nhật sản phẩm"
         order: "Cập nhật đơn hàng"
+      confirm_delete: "Xác nhận xoá?"

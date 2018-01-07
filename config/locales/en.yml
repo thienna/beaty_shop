@@ -1,4 +1,6 @@
 en:
+  errors:
+   format: "%{attribute} %{message}"
   languages:
     pick: "Choose a language"
     viet: "Vietnamese"
@@ -137,6 +139,18 @@ en:
       list: "Category list"
       add: "Add a Category"
       edit: "Edit a Category"
+      find_failed: "Can't find category"
+      nothing: "No category exist!"
+      action:
+        create:
+          success: "Create category success!"
+          failed: "Create category failed."
+        destroy:
+          success: "Delete category success!"
+          failed: "Delete category failed."
+        update:
+          success: "Update category success!"
+          failed: "Update category failed."
       h_add:
         name: "Enter category name"
         desc: "Enter category description"
@@ -153,3 +167,4 @@ en:
         category: "Update Category"
         product: "Update Product"
         order: "Update Order"
+      confirm_delete: "Deleting confirm?"

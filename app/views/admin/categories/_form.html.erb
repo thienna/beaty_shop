@@ -1,0 +1,21 @@
+<%= form_for [:admin, category] do |f| %>
+  <div class="form-group">
+    <%= f.label :name, t("admin_page.table.head.name") %>
+    <%= f.text_field :name, class: "form-control",
+      placeholder: t("admin_page.categories.h_add.name") %>
+    <%= render "shared/error_messages", object: category, field: :name %>
+  </div>
+  <div class="form-group">
+    <%= f.label :description, t("admin_page.table.head.desc") %>
+    <%= f.text_area :description, class: "form-control",
+      placeholder: t("admin_page.categories.h_add.desc") %>
+    <%= render "shared/error_messages", object: category, field: :description %>
+  </div>
+  <% if f.object.new_record? %>
+    <%= button_tag t("admin_page.button.create.category"),
+      type: :submit, class: "btn btn-outline btn-primary" %>
+  <% else %>
+    <%= button_tag t("admin_page.button.edit.category"),
+      type: :submit, class: "btn btn-outline btn-success" %>
+  <% end %>
+<% end %>

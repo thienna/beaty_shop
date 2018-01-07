@@ -2,8 +2,7 @@ Rails.application.routes.draw do
   scope "(:locale)", locale: /en|vi/ do
     namespace :admin do
       root "dashboard#index"
-      resource :category, only: :edit
-      resources :categories, only: %i(index new)
+      resources :categories, except: :show
       resource :product, only: :edit
       resources :products, only: %i(index new)
       resource :order, only: :edit

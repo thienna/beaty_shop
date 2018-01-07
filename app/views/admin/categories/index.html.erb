@@ -10,14 +10,6 @@
       <div class="panel-heading">
         <%= t "admin_page.categories.list" %>
       </div>
-
-      <div class="row">
-        <div class="col-sm-offset-3 col-sm-6 table-search">
-          <%= search_field_tag :table_search, nil, class: "form-control input-sm",
-            placeholder: t("admin_page.table.h_search") %>
-        </div>
-      </div>
-
       <div class="panel-body">
         <table width="100%"
           class="table table-striped table-bordered table-hover">
@@ -30,9 +22,20 @@
             </tr>
           </thead>
           <tbody>
-            <%= render "admin/categories/category" %>
+          <% if @categories.any? %>
+            <%= render @categories %>
+          <% else %>
+            <tr>
+              <td colspan="4" class="text-center">
+                <%= t "admin_page.categories.nothing" %>
+              </td>
+            </tr>
+          <% end %>
           </tbody>
         </table>
+        <div>
+          <%= paginate @categories %>
+        </div>
       </div>
     </div>
   </div>
