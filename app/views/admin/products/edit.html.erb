@@ -12,12 +12,11 @@
       <div class="panel-body">
         <div class="row">
           <div class="col-lg-6">
-            <%= render "admin/shared/form_product" %>
-            <%= button_tag t("admin_page.button.edit.product"),
-              class: "btn btn-outline btn-success" %>
+            <%= render "form", product: @product,
+              categories: @categories %>
           </div>
           <div class="col-lg-6 text-center mike-admin-product-img">
-            <%= image_tag "products/1.jpg" %>
+            <%= image_tag @product.picture.url if @product.picture?  %>
           </div>
         </div>
       </div>

@@ -1,4 +1,22 @@
 vi:
+  activerecord:
+    models:
+      product: "Sản phẩm"
+      category: "Danh mục"
+    attributes:
+      product:
+        name: "Tên"
+        quantity: "Số lượng"
+        price: "Giá"
+        price_sale: "Giá Sale"
+        picture: "Ảnh"
+        description: "Mô tả"
+      category:
+        name: "Tên"
+    errors:
+      messages:
+        blank: "không được để trống"
+        too_long: "quá dài (tối đa là %{count} ký tự)"
   views:
     pagination:
       truncate: "..."
@@ -116,6 +134,7 @@ vi:
     w_product_name: "Tên sản phẩm"
     w_product_id: "Mã sản phẩm"
     w_unit_price: "Đơn giá"
+    w_category: "Danh mục"
     w_customer:
       name: "Tên KH"
       address: "Địa chỉ"
@@ -136,12 +155,25 @@ vi:
       add: "Thêm sản phẩm"
       edit: "Sửa sản phẩm"
       show: "Hiển thị sản phẩm"
+      validates_size_failed: "Kích thước ảnh không phù hợp"
+      find_failed: "Không tìm thấy sản phẩm"
+      action:
+        create:
+          success: "Tạo sản phẩm thành công!"
+          failed: "Tạo sản phẩm thất bại."
+        destroy:
+          success: "Xoá sản phẩm thành công!"
+          failed: "Xoá sản phẩm thất bại."
+        update:
+          success: "Cập nhật sản phẩm thành công!"
+          failed: "Cập nhật sản phẩm thất bại."
       h_:
         name: "Nhập tên sản phẩm"
         desc: "Nhập mô tả sản phẩm"
         price: "Nhập giá sản phẩm"
         price_sale: "Nhập giá sale sản phẩm"
         quantity: "Nhập số lượng sản phẩm"
+        category: "Chọn danh mục cho sản phẩm"
     categories:
       list: "Danh sách danh mục"
       add: "Thêm danh mục"

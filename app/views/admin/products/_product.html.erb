@@ -1,7 +1,7 @@
 <tr>
   <td class="text-center"><%= product.id %></td>
   <td class="text-center mike-table-img">
-    <%= product.picture ? image_tag(product.picture.url)
+    <%= product.picture? ? image_tag(product.picture.url)
       : image_tag("no-img.jpeg") %>
   </td>
   <td class="text-center"><%= product.name %></td>
@@ -16,7 +16,7 @@
     <%= link_to admin_product_path(product), method: :delete,
       class: "mike-action mike-action-delete",
       data: {confirm: t("admin_page.button.confirm_delete")} do %>
-      <i class="fa fa-times"></i>
+      <i class="fa fa-trash-o"></i>
     <% end %>
   </td>
 </tr>

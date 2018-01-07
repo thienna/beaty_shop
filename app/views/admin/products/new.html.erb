@@ -12,9 +12,7 @@
       <div class="panel-body">
         <div class="row">
           <div class="col-lg-6">
-            <%= render "admin/shared/form_product" %>
-            <%= button_tag t("admin_page.button.create.product"),
-              class: "btn btn-outline btn-primary" %>
+            <%= render "form", product: @product, categories: @categories %>
           </div>
         </div>
       </div>
