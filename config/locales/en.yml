@@ -1,4 +1,9 @@
 en:
+  helpers:
+    submit:
+      product:
+        create: "Add %{model}"
+        update: "Update %{model}"
   errors:
    format: "%{attribute} %{message}"
   languages:
@@ -109,6 +114,7 @@ en:
     w_product_name: "Product Name"
     w_product_id: "Product Id"
     w_unit_price: "Unit Price"
+    w_category: "Category"
     w_customer:
       name: "Customer Name"
       address: "Address"
@@ -129,12 +135,25 @@ en:
       add: "Add a Product"
       edit: "Edit a Product"
       show: "Showing Product"
+      validates_size_failed: "Size of picture is not allowed"
+      find_failed: "Can't find product"
+      action:
+        create:
+          success: "Create product success!"
+          failed: "Create product failed."
+        destroy:
+          success: "Delete product success!"
+          failed: "Delete product failed."
+        update:
+          success: "Update product success!"
+          failed: "Update product failed."
       h_:
         name: "Enter product name"
         desc: "Enter product description"
         price: "Enter product price"
         price_sale: "Enter product discount"
         quantity: "Enter product quantity"
+        category: "Pick categories of product"
     categories:
       list: "Category list"
       add: "Add a Category"

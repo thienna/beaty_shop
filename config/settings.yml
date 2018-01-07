@@ -7,3 +7,10 @@ quantity:
 categories:
   name:
     maximum: 100
+product:
+  name:
+    maximum: 150
+  picture:
+    size: 3
+  quantity:
+    minimum: 0
