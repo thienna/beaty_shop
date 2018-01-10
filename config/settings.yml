@@ -4,3 +4,6 @@ price:
 quantity:
   value: 1
   size: 4
+categories:
+  name:
+    maximum: 100

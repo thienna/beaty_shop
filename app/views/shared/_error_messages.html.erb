@@ -1,0 +1,5 @@
+<% if object.errors[field].any? %>
+  <div class="error-explanation">
+    <%= object.errors.full_messages_for(field).first %>
+  </div>
+<% end %>

@@ -1,11 +1,16 @@
 <tr>
-  <td><%= t "admin_page.w_id" %></td>
-  <td><%= t "admin_page.categories.h_add.name" %></td>
-  <td><%= t "admin_page.categories.h_add.desc" %></td>
+  <td class="text-center"><%= category.id %></td>
+  <td class="text-center"><%= category.name %></td>
+  <td class="text-center"><%= category.description %></td>
   <td class="text-center">
-    <%= button_tag t("admin_page.w_edit"), name: :edit, type: :button,
-      class: "btn btn-outline btn-info" %>
-    <%= button_tag t("admin_page.w_delete"), name: :delete, type: :button,
-      class: "btn btn-outline btn-danger" %>
+    <%= link_to edit_admin_category_path(category),
+      class: "mike-action mike-action-edit" do %>
+      <i class="fa fa-pencil"></i>
+    <% end %>
+    <%= link_to admin_category_path(category), method: :delete,
+      class: "mike-action mike-action-delete",
+      data: {confirm: t("admin_page.button.confirm_delete")} do %>
+      <i class="fa fa-times"></i>
+    <% end %>
   </td>
 </tr>
