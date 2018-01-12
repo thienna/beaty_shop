@@ -101,7 +101,7 @@ en:
     w_update: "Update"
     w_price: "Price"
     w_quantity: "Quantity"
-    w_price_sale: "Price Sale"
+    w_price_sale: "Price Sale (%)"
     w_picture: "Picture"
     w_id: "Id"
     w_total_price: "Total Price"
@@ -168,3 +168,4 @@ en:
         product: "Update Product"
         order: "Update Order"
       confirm_delete: "Deleting confirm?"
+    w_no_record: "No record found."
