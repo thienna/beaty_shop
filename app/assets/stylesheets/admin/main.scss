@@ -81,6 +81,7 @@ $alert-alert-bc: #faebcc;
   border-radius: 5px;
   color: $mike-w;
   display: inline-block;
+  outline: none;
   padding: 5px 10px;
 
   &.mike-action-delete {
@@ -190,4 +191,12 @@ $alert-alert-bc: #faebcc;
     color: $mike-red;
     margin: 0 0 30px;
   }
+}
+
+.mike-filter-group {
+  padding-top: 2.5%;
+}
+
+.mike-filter-btn-group {
+  padding-top: 5%;
 }

@@ -9,20 +9,20 @@
     <div class="panel panel-default">
       <div class="panel-heading">
         <%= t "admin_page.w_order_details" %>:
-        <%= @order.id %>
+        <%= "#{@order.id}, #{t "admin_page.orders.form.status.#{@order.status}"}" %>
       </div>
 
       <div class="panel-body">
         <table class="table table-striped table-bordered table-hover">
           <thead>
-          <tr>
-            <th class="text-center"><%= t "admin_page.w_product_id" %></th>
-            <th class="text-center"><%= t "admin_page.w_product_name" %></th>
-            <th class="text-center"><%= t "admin_page.w_product_price" %></th>
-            <th class="text-center"><%= t "admin_page.w_quantity" %></th>
-            <th class="text-center"><%= t "admin_page.w_unit_price" %></th>
-            <th class="text-center"><%= t "admin_page.w_action" %></th>
-          </tr>
+            <tr>
+              <th class="text-center"><%= t "admin_page.w_product_id" %></th>
+              <th class="text-center"><%= t "admin_page.w_product_name" %></th>
+              <th class="text-center"><%= t "admin_page.w_product_price" %></th>
+              <th class="text-center"><%= t "admin_page.w_quantity" %></th>
+              <th class="text-center"><%= t "admin_page.w_unit_price" %></th>
+              <th class="text-center"><%= t "admin_page.w_action" %></th>
+            </tr>
           </thead>
           <tbody>
             <% if @order_details.any? %>

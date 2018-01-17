@@ -5,6 +5,7 @@ Rails.application.routes.draw do
       resources :categories, only: %i(index new create edit update destroy)
       resources :products, only: %i(index new create edit update destroy)
       resources :orders, only: %i(index show update destroy)
+      resources :order_details, only: %i(update destroy)
     end
 
     root "home#index"

@@ -12,4 +12,16 @@ class Order < ApplicationRecord
   validates :customer_address, presence: true
   validates :customer_email, presence: true, format: {with: VALID_EMAIL_REGEX}
   validates :customer_phone, presence: true
+
+  scope :newest, ->{order created_at: :desc}
+
+  before_save :calculate_total_price
+
+  private
+
+  def calculate_total_price
+    self.total_price = order_details.map do |order_detail|
+      order_detail.valid? ? (order_detail.quantity * order_detail.unit_price) : 0
+    end.sum
+  end
 end
