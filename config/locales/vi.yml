@@ -138,9 +138,11 @@ vi:
     w_total_price: "Thành tiền"
     w_status: "Trạng thái"
     w_product_name: "Tên sản phẩm"
+    w_product_price: "Giá sản phẩm"
     w_product_id: "Mã sản phẩm"
     w_unit_price: "Đơn giá"
     w_category: "Danh mục"
+    w_order_details: "Chi tiết đơn hàng"
     w_customer:
       name: "Tên KH"
       address: "Địa chỉ"
@@ -151,6 +153,17 @@ vi:
       add: "Thêm đơn hàng"
       edit: "Sửa đơn hàng"
       details: "Thông tin chi tiết đơn hàng"
+      find_failed: "Không tìm thấy đơn hàng"
+      action:
+        create:
+          success: "Tạo đơn hàng thành công!"
+          failed: "Tạo đơn hàng thất bại."
+        destroy:
+          success: "Xoá đơn hàng thành công!"
+          failed: "Xoá đơn hàng thất bại."
+        update:
+          success: "Cập nhật đơn hàng thành công!"
+          failed: "Cập nhật đơn hàng thất bại."
       h_:
         name: "Nhập tên khách hàng"
         email: "Nhập email khách hàng"

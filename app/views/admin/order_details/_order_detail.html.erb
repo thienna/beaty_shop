@@ -1,9 +1,25 @@
 <tr>
-  <td><%= t "admin_page.w_id" %></td>
-  <td><%= t "admin_page.w_customer.name" %></td>
-  <td><%= t "admin_page.table.head.name" %></td>
-  <td class="mike-select-qty"><%= number_field_tag :order_detail_quantity,
-    Settings.quantity.value %></td>
-  <td><%= t "admin_page.w_price" %></td>
-  <%= render "admin/shared/list_action" %>
+  <td class="text-center"><%= order_detail.product_id %></td>
+  <td class="text-center"><%= order_detail.product.name %></td>
+  <td class="text-center">
+    <%= number_to_currency order_detail.product.price %>
+  </td>
+  <td class="text-center mike-select-qty">
+    <%= number_field_tag :order_detail_quantity,
+      Settings.quantity.value %>
+  </td>
+  <td class="text-center">
+    <%= number_to_currency order_detail.unit_price %>
+  </td>
+  <td class="text-center">
+    <%= link_to "#",
+      class: "mike-action mike-action-edit" do %>
+        <i class="fa fa-check"></i>
+    <% end %>
+    <%= link_to "#", method: :delete,
+      class: "mike-action mike-action-delete",
+      data: {confirm: t("admin_page.button.confirm_delete")} do %>
+        <i class="fa fa-trash-o"></i>
+    <% end %>
+  </td>
 </tr>

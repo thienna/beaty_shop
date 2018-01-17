@@ -1,10 +1,22 @@
 <tr>
-  <td><%= t "admin_page.w_id" %></td>
-  <td><%= t "admin_page.w_customer.name" %></td>
-  <td><%= t "admin_page.table.head.name" %></td>
-  <td><%= t "admin_page.table.head.desc" %></td>
-  <td><%= t "admin_page.w_price" %></td>
-  <td><%= t "admin_page.w_quantity" %></td>
-  <%= render "admin/shared/list_label", status: :done %>
-  <%= render "admin/shared/list_action" %>
+  <td><%= order.id %></td>
+  <td><%= order.customer_name %></td>
+  <td><%= order.customer_address %></td>
+  <td><%= order.customer_phone %></td>
+  <td><%= order.customer_email %></td>
+  <td><%= number_to_currency order.total_price %></td>
+  <td class="text-center" id="mike-order-status-<%= order.id %>">
+    <%= render "status", order: order, statuses: statuses %>
+  </td>
+  <td class="text-center">
+    <%= link_to admin_order_path(order),
+      class: "mike-action mike-action-edit" do %>
+      <i class="fa fa-eye"></i>
+    <% end %>
+    <%= link_to admin_order_path(order), method: :delete,
+      class: "mike-action mike-action-delete",
+      data: {confirm: t("admin_page.button.confirm_delete")} do %>
+      <i class="fa fa-trash-o"></i>
+    <% end %>
+  </td>
 </tr>

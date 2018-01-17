@@ -112,9 +112,11 @@ en:
     w_total_price: "Total Price"
     w_status: "Status"
     w_product_name: "Product Name"
+    w_product_price: "Product Price"
     w_product_id: "Product Id"
     w_unit_price: "Unit Price"
     w_category: "Category"
+    w_order_details: "Order details"
     w_customer:
       name: "Customer Name"
       address: "Address"
@@ -125,6 +127,17 @@ en:
       add: "Add an Order"
       edit: "Edit an Order"
       details: "Order details"
+      find_failed: "Can't find order"
+      action:
+        create:
+          success: "Create order success!"
+          failed: "Create order failed."
+        destroy:
+          success: "Delete order success!"
+          failed: "Delete order failed."
+        update:
+          success: "Update order success!"
+          failed: "Update order failed."
       h_:
         name: "Enter customer name"
         email: "Enter customer email"
