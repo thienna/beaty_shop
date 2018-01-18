@@ -4,6 +4,13 @@ en:
       product:
         create: "Add %{model}"
         update: "Update %{model}"
+  views:
+    pagination:
+      truncate: "..."
+      next: "›"
+      last: "»"
+      previous: "‹"
+      first: "«"
   errors:
    format: "%{attribute} %{message}"
   languages:
@@ -19,6 +26,7 @@ en:
         strip_insignificant_zeros: false
         format: "%u %n"
   home_page:
+    title: "Marccain Cosmetic Shop"
     hotline: "Hotline"
     hotline_detail: "Contact 0972 792 096"
     home: "Home"

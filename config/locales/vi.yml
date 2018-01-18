@@ -26,10 +26,10 @@ vi:
   views:
     pagination:
       truncate: "..."
-      next: "Trang tiếp theo ›"
-      last: "Trang cuối »"
-      previous: "‹ Trang trước"
-      first: "« Trang đầu"
+      next: "›"
+      last: "»"
+      previous: "‹"
+      first: "«"
   errors:
     format: "%{attribute} %{message}"
   languages:
@@ -45,6 +45,7 @@ vi:
         strip_insignificant_zeros: true
         format: "%n %u"
   home_page:
+    title: "Marccain Shop"
     hotline: "Đường dây nóng"
     hotline_detail: "Liên hệ 0972 792 096"
     home: "Trang chủ"

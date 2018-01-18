@@ -9,14 +9,22 @@
         </div>
         <ul class="products product-list-grid
           desktop-columns-3 tablet-columns-2 mobile-columns-1">
-          <% 5.times do |i| %>
-            <%= render "products/product" %>
+          <% if @products.any? %>
+            <%= render @products %>
+          <% else %>
+            <%= t "admin_page.w_no_record" %>
           <% end %>
         </ul>
-        <%= render "shared/pagination" %>
+        <%= paginate @products %>
       </div>
       <div class="col-sm-4 col-md-3 sidebar">
-        <%= render "shared/categories" %>
+        <br>
+        <% if @categories.any? %>
+          <%= render @categories %>
+        <% else %>
+          <%= t "admin_page.w_no_record" %>
+        <% end %>
+        <br>
         <%= render "shared/filter_by_price" %>
       </div>
     </div>
