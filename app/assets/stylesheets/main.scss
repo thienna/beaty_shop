@@ -1,5 +1,30 @@
+$color-white: #fff;
+$color-mk: #eec15b;
+$color-blur: rgba(0, 0, 0, .75);
+
 .top-bar-left .form-search-wapper {
   width: 65%;
+}
+
+.woocommerce-pagination.navigation {
+  .page-numbers {
+    .page-numbers.current {
+      background-color: $color-mk;
+      border-radius: 50%;
+      color: $color-white;
+      display: inline-block;
+      height: 36px;
+      line-height: 36px;
+      margin: 0 5px;
+      text-align: center;
+      width: 36px;
+    }
+  }
+}
+
+.product-list-grid .product-item .product-inner {
+  box-shadow: 0 0 20px -10px $color-blur;
+  margin: 5px;
 }
 
 .footer {

@@ -22,6 +22,16 @@ class Product < ApplicationRecord
 
   scope :newest, ->{order created_at: :desc}
 
+  def get_status
+    return :new if created_at >= Time.zone.now - 7
+    return :sale if price_sale > 0
+    quantity > 0 ? :instock : :outstock
+  end
+
+  def get_price
+    price * (100 - price_sale) / 100
+  end
+
   private
 
   def picture_size

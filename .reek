@@ -11,3 +11,7 @@ PrimaDonnaMethod:
 UnusedParameters:
   exclude:
     - "ApplicationController#after_sign_in_path_for"
+
+FeatureEnvy:
+  exclude:
+    - "ApplicationHelper#full_title"

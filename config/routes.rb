@@ -9,7 +9,7 @@ Rails.application.routes.draw do
     end
 
     root "home#index"
-    get "/product", to: "products#show"
+    resources :products, only: :show
     resource :cart, only: :show
     resources :orders, only: :index
 
