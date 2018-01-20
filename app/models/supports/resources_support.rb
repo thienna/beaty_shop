@@ -1,4 +1,4 @@
-class Supports::ProductSupport
+class Supports::ResourcesSupport
   def max_price
     @max ||= Product.maximum(:price).to_i
   end

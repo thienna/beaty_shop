@@ -7,28 +7,30 @@
             <div class="col-sm-12 col-md-5">
               <div class="images kt-images">
                 <div class="kt-main-image">
-                  <%= link_to image_path("products/3.jpg"), class: "zoom" do %>
-                    <%= image_tag "products/3.jpg" %>
-                  <% end %>
+                  <%= @product.picture? ?
+                    link_to(image_tag(@product.picture.url), class: "zoom")
+                    : link_to(image_tag "no-img.jpeg") %>
                 </div>
               </div>
             </div>
             <div class="col-sm-12 col-md-7">
               <div class="summary">
                 <h1 class="product_title entry-title">
-                  ArchitectMade Oscar Figure
+                  <%= @product.name %>
                 </h1>
                 <span class="price">
-                  <%= number_to_currency 75 %>
+                  <%= number_to_currency @product.get_price %>
                 </span>
                 <p class="stock out-of-stock">
                   <label><%= t "home_page.product.available" %> </label>
                   <i class="fa fa-check"></i>
-                  <%= t "home_page.product.status.instock" %>
+                  <%= @product.quantity > 0 ?
+                    t("home_page.product.status.instock")
+                    : t("home_page.product.status.outstock") %>
                 </p>
                 <div class="short-descript">
                   <p><strong><%= t "home_page.product.description" %> </strong>
-                  Description blah blah
+                  <%= @product.description %>
                 </div>
                 <div class="quantity">
                   <label><%= t "home_page.product.select_quantity" %> </label>
@@ -46,7 +48,16 @@
         </div>
       </div>
       <div class="col-sm-4 col-md-3 sidebar">
-        <%= render "shared/categories" %>
+        <div class="widget widget_product_categories">
+          <h2 class="widget-title"><%= t "home_page.filter_by_cate" %></h2>
+          <ul class="product-categories">
+            <% if @support.all_categories.any? %>
+              <%= render @support.all_categories %>
+            <% else %>
+              <%= t "admin_page.w_no_record" %>
+            <% end %>
+          </ul>
+        </div>
       </div>
     </div>
   </div>

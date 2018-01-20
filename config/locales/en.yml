@@ -68,6 +68,7 @@ en:
     category:
       product: "Product Categories"
     filter_by_price: "Filter by price"
+    filter_by_cate: "Filter by categories"
     price: "Price:"
     cart:
       total: "Total"

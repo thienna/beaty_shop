@@ -1,4 +1,4 @@
-<li>
+<li class="<%= params[:category] == category.id.to_s ? 'current-cat' : nil  %>">
   <%= link_to category.name, root_path(category: category.id) %>
   <span class="count">(<%= category.products.count %>)</span>
 </li>

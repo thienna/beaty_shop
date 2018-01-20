@@ -1,6 +1,13 @@
 $color-white: #fff;
 $color-mk: #eec15b;
 $color-blur: rgba(0, 0, 0, .75);
+$alert-notice-c: #31708f;
+$alert-notice-bg: #d9edf7;
+$alert-notice-bc: #bce8f1;
+$alert-alert-c: #8a6d3b;
+$alert-alert-bg: #fcf8e3;
+$alert-alert-bc: #faebcc;
+$mike-red: #d9534f;
 
 .top-bar-left .form-search-wapper {
   width: 65%;
@@ -29,6 +36,59 @@ $color-blur: rgba(0, 0, 0, .75);
 
 .mike-filter-btn {
   margin: 10% 0 0 30%;
+}
+
+.alert {
+  animation: flash-message 5s forwards 3s;
+  left: 12%;
+  position: absolute;
+  top: 55%;
+  width: 80%;
+  z-index: 9999;
+
+  &.alert-notice {
+    background-color: $alert-notice-bg;
+    border-color: $alert-notice-bc;
+    color: $alert-notice-c;
+  }
+
+  &.alert-alert {
+    background-color: $alert-alert-bg;
+    border-color: $alert-alert-bc;
+    color: $alert-alert-c;
+  }
+}
+
+@keyframes flash-message {
+  0% {
+    opacity: 1;
+    z-index: 9999;
+  }
+
+  100% {
+    opacity: 0;
+    z-index: -9999;
+  }
+}
+
+.error-explanation {
+  color: $mike-red;
+  font-style: italic;
+  margin-left: 5px;
+  margin-top: 8px;
+
+  ul {
+    color: $mike-red;
+    margin: 0 0 30px;
+  }
+}
+
+.ui-slider-handle {
+  outline: 0;
+}
+
+.mike-hp-search {
+  outline: 0;
 }
 
 .footer {
