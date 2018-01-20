@@ -22,7 +22,7 @@ en:
       format:
         delimiter: ","
         separator: "."
-        unit: "$"
+        unit: "$ "
         strip_insignificant_zeros: false
         format: "%u %n"
   home_page:
@@ -61,9 +61,9 @@ en:
     sort:
       default: "Default sorting"
       date: "Sort by newness"
-      name: "Sort by name: A-Z"
+      name_asc: "Sort by name: A-Z"
       name_desc: "Sort by name: Z-A"
-      price: "Sort by price: low to high"
+      price_asc: "Sort by price: low to high"
       price_desc: "Sort by price: high to low"
     category:
       product: "Product Categories"
@@ -212,8 +212,13 @@ en:
       h_search: "Search in table"
     button:
       search: "Search"
+      searching: "Searching"
       filter: "Filter"
+      filtering: "Filtering"
+      sort: "Sort"
+      sorting: "Sorting"
       h_search: "Pick a filter"
+      h_sort: "Choose a sort type"
       create:
         category: "Create Category"
         product: "Create Product"

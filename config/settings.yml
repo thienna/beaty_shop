@@ -15,3 +15,8 @@ product:
   quantity:
     minimum: 0
   per_page: 6
+  sort_types:
+    name_asc: "name asc"
+    name_desc: "name desc"
+    price_asc: "price asc"
+    price_desc: "price desc"

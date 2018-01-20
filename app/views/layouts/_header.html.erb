@@ -3,15 +3,16 @@
     <div class="container">
       <div class="top-bar-left">
         <div class="logo">
-          <%= link_to "#" do %>
+          <%= link_to root_path do %>
             <%= image_tag "logo.jpeg" %>
           <% end %>
         </div>
         <div class="form-search-wapper">
-          <%= form_tag nil, class: "form-search" do %>
-            <%= text_field_tag :search_input, nil,
-              placeholder: t("home_page.search_holder"), class: "input" %>
-            <%= button_tag name: :search_button, class: "btn-search" do %>
+          <%= search_form_for search, url: root_path,
+            class: "form-search" do |f| %>
+            <%= f.search_field :name_cont, class: "input",
+              placeholder: t("home_page.search_holder") %>
+            <%= f.button class: "btn-search" do %>
               <span class="flaticon-magnifying-glass34"></span>
             <% end %>
           <% end %>
@@ -20,7 +21,7 @@
       <div class="top-bar-right">
         <ul class="kt-nav top-bar-menu">
           <li class="menu-item-has-children box-setting">
-            <%= link_to "#" do %>
+            <%= link_to "#", data: {turbolinks: false} do %>
               <span class="menu-icon flaticon-configuration21"></span>
             <% end %>
             <div class="sub-menu box-setting-content">
@@ -115,7 +116,8 @@
   <div class="main-header">
     <div class="container">
       <div class="main-menu-wapper">
-        <%= link_to "#", class: "mobile-navigation" do %>
+        <%= link_to "#", data: {turbolinks: false},
+          class: "mobile-navigation" do %>
           <span class="icon">
             <span></span>
             <span></span>
@@ -125,7 +127,7 @@
         <% end %>
         <ul class="kt-nav main-menu clone-main-menu">
           <li>
-            <%= link_to t("home_page.home"), "#" %>
+            <%= link_to t("home_page.home"), root_path %>
           </li>
           <li>
             <%= link_to t("home_page.introduce"), "#" %>
