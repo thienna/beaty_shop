@@ -7,4 +7,11 @@ module ApplicationHelper
   def current_cart
     session[:cart] ||= Array.new
   end
+
+  def current_cart_total_price
+    return Settings.price.default if current_cart.empty?
+    current_cart.map do |item|
+      item["unit_price"]
+    end.sum
+  end
 end

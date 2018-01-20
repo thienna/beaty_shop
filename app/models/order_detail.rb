@@ -9,10 +9,17 @@ class OrderDetail < ApplicationRecord
       {only_integer: true, greater_than: Settings.product.quantity.minimum}
 
   before_save :calculate_unit_price
+  after_save :decrease_product_quantity
 
   private
 
   def calculate_unit_price
     self.unit_price = quantity * product.price
+  end
+
+  def decrease_product_quantity
+    product = self.product
+    quantity = product.quantity - self.quantity
+    product.update quantity: quantity
   end
 end

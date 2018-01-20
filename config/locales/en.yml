@@ -33,7 +33,7 @@ en:
     introduce: "Introduce"
     shopping_guides: "Shopping Guides"
     main_menu: "Main Menu"
-    shopping_cart: "SHOPPING CART"
+    shopping_cart: "View detail Cart"
     item_in_cart: "You have <span class='count'>%{quantity}</span> in your cart."
     select_lang: "Select your language:"
     item: "item"
@@ -47,6 +47,7 @@ en:
     add_to_cart: "Add to cart"
     word_product: "Product"
     word_sub_total: "Sub Total"
+    w_thank: "Order successfully, thank you!"
     product:
       quick_view: "Quick view"
       status:
@@ -75,10 +76,13 @@ en:
       quantity: "Quantity"
       available: "Available"
       remove: "Remove"
+      nothing: "Your shopping cart is empty."
       product_price:  "Product/Price"
       action:
         add_success: "Successfully add product to Cart"
         add_already: "Product has been already in Cart"
+        update_succes: "Your cart has been updated!"
+        remove_success: "An item has been removed from your Cart."
         check_qty: "Quantity not valid."
     button:
       update_cart: "Update SHOPPING CART"
@@ -108,6 +112,7 @@ en:
   w_products: "Products"
   w_categories: "Categories"
   w_something_wrong: "Something went wrong."
+  w_order_info: "Order information"
   admin_page:
     new_order: "New Orders!"
     title: "Cosmetic Shop Admin"

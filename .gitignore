@@ -76,8 +76,6 @@ fabric.properties
 
 .idea/
 config/initializers/secret_token.rb
-config/database.yml
-config/secrets.yml
 *.rbc
 .rspec
 
