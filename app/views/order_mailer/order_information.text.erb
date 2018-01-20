@@ -1,0 +1,13 @@
+<h1><%= t "w_order_info" %></h1>
+<h3><%= @order.id %></h3>
+
+<p><%= @order.customer_name %></p>
+<p><%= @order.customer_phone %></p>
+<p><%= @order.customer_email %></p>
+<p><%= @order.customer_address %></p>
+
+<%= @order.order_details.each do |item| %>
+  <p><%= item.product.name %></p>
+  <p><%= item.product.price %></p>
+  <p><%= item.product.price_sale %></p>
+<% end %>

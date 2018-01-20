@@ -91,9 +91,13 @@ $mike-red: #d9534f;
   outline: 0;
 }
 
+.mike-hidden-btn-cart {
+  visibility: hidden;
+}
+
 .mike-flash-wrapper {
   position: fixed;
-  top: 10%;
+  top: 25%;
   width: 100%;
   z-index: 10;
 }

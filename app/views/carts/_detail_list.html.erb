@@ -1,0 +1,64 @@
+<% if session[:cart].any? %>
+  <% session[:cart].each do |item| %>
+    <tr>
+      <td class="product">
+        <%= item["product_img"] ?
+          image_tag(item["product_img"], class: "product-thumb")
+          : image_tag("no-img.jpeg", class: "product-thumb") %>
+        <div class="product-info">
+          <h3 class="product-name">
+            <%= link_to item["product_name"],
+              product_path(item["product_id"]) %>
+          </h3>
+          <span class="product-price">
+            <%= number_to_currency item["product_price"] %>
+          </span>
+        </div>
+      </td>
+      <td class="stock">
+        <% if item["availability"] == 1 %>
+          <span class="in-stock">
+            <%= t "home_page.product.status.instock" %>!
+          </span>
+        <% else %>
+          <span class="out-stock">
+            <%= t "home_page.product.status.outstock" %>.
+          </span>
+        <% end %>
+      </td>
+      <td>
+        <div class="quantity">
+          <%= form_for :cart_detail, url: order_details_path,
+            method: :post, remote: true do |f| %>
+            <%= f.text_field :qty, value: item["quantity"],
+              class: "input-text qty text mike-cart-form-qty" %>
+            <%= f.hidden_field :service, value: :update, class: "mike-cart-service" %>
+            <%= f.hidden_field :product_id, value: item["product_id"] %>
+          <% end %>
+        </div>
+      </td>
+      <td class="product-subtotal">
+        <span class="amount">
+          <%= number_to_currency item["unit_price"] %>
+        </span>
+      </td>
+      <td class="product-remove">
+        <%= link_to "#", data: {turbolinks: false},
+          class: "remove mike-cart-remove-item-btn" do %>
+          <i class="fa fa-close"></i>
+        <% end %>
+      </td>
+    </tr>
+  <% end %>
+  <tr>
+    <td colspan="3"></td>
+    <td colspan="2" class="order-total">
+      <%= t "home_page.cart.total" %>:
+      <%= number_to_currency current_cart_total_price %>
+    </td>
+  </tr>
+<% else %>
+  <td class="text-center" colspan="5">
+    <%= t "home_page.cart.nothing" %>
+  </td>
+<% end %>

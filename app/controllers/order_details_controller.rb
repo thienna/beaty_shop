@@ -56,6 +56,10 @@ class OrderDetailsController < ApplicationController
     case cart_detail["service"]
     when "add"
       :add_cart
+    when "update"
+      :update_cart
+    when "remove"
+      :remove_item
     else
       :wrong_cart
     end

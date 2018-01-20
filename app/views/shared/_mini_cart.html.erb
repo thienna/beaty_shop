@@ -1,0 +1,61 @@
+<%= link_to "#", data: {turbolinks: false},class: "cart-link" do %>
+  <span class="menu-icon  icon flaticon-shopping-cart6"></span>
+  <span class="count"><%= current_cart.count %></span>
+  <span class="text"><%= t "home_page.item" %></span>
+  <span class="kak">-</span>
+  <span class="subtotal">
+    <%= number_to_currency current_cart_total_price %>
+  </span>
+<% end %>
+<div class="sub-menu mini-cart-content">
+  <div class="content-inner">
+    <h3 class="box-title">
+      <%= raw t("home_page.item_in_cart",
+        quantity: pluralize(current_cart.count, t("home_page.item"))) %>
+    </h3>
+    <ul class="list-item-cart">
+      <% if session[:cart].any? %>
+        <% session[:cart][0..2].each do |item| %>
+          <li class="item-cart">
+            <div class="thumb">
+              <%= item["product_img"] ? image_tag(item["product_img"])
+                : image_tag("no-img.jpeg") %>
+            </div>
+            <div class="product-info">
+              <h4 class="product-name">
+                <%= link_to item["product_name"],
+                  product_path(item["product_id"]) %>
+              </h4>
+              <span class="price">
+                <%= item["quantity"] %> x
+                <%= number_to_currency item["product_price"] %>
+              </span>
+              <%= link_to order_details_path(cart_detail: {service: :remove,
+                product_id: item["product_id"], qty: item["quantity"]}),
+                method: :post, remote: true,
+                class: "remove-item" do %>
+                <i class="fa fa-close"></i>
+              <% end %>
+            </div>
+          </li>
+        <% end %>
+      <% else %>
+        <%= t "home_page.cart.nothing" %>
+      <% end %>
+    </ul>
+    <div class="subtotal">
+      <%= t "home_page.cart.total" %>:
+      <span class="amout">
+        <%= number_to_currency current_cart_total_price %>
+      </span>
+    </div>
+    <%= link_to cart_path, class: "button" do %>
+      <%= t "home_page.shopping_cart" %>
+      <i class="fa fa-info-circle"></i>
+    <% end %>
+    <%= link_to new_orders_path, class: "button primary" do %>
+      <%= t "home_page.button.process_order" %>
+      <i class="fa fa-check"></i>
+    <% end %>
+  </div>
+</div>

@@ -11,7 +11,7 @@ Rails.application.routes.draw do
     root "home#index"
     resources :products, only: :show
     resource :cart, only: :show
-    resources :orders, only: :index
+    resource :orders, only: %i(new create)
     resources :order_details, only: :create
 
     devise_for :user, path: "",

@@ -1,0 +1,80 @@
+<div class="main-container no-sidebar">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 main-content">
+        <%= form_for @order, class: "checkout" do |f| %>
+          <div class="row">
+          <div class="col-sm-6">
+            <div class="block-form">
+              <h3 class="form-heading">
+                <%= t "home_page.order.fill_info" %>
+              </h3>
+              <p>
+                <%= f.text_field :customer_name,
+                  placeholder: t("home_page.order.full_name") %>
+                <%= render "shared/error_messages", object: @order, field: :customer_name %>
+              </p>
+              <p>
+                <%= f.text_field :customer_address,
+                  placeholder: t("home_page.order.address") %>
+                <%= render "shared/error_messages", object: @order, field: :customer_address %>
+              </p>
+              <p>
+                <%= f.text_field :customer_phone,
+                  placeholder: t("home_page.order.phone") %>
+                <%= render "shared/error_messages", object: @order, field: :customer_phone %>
+              </p>
+              <p>
+                <%= f.text_field :customer_email,
+                  placeholder: t("home_page.order.email") %>
+                <%= render "shared/error_messages", object: @order, field: :customer_email %>
+              </p>
+              <% current_cart.each do |item| %>
+                <%= f.fields_for :order_details, OrderDetail.new do |field| %>
+                  <%= field.hidden_field :product_id, value: item["product_id"] %>
+                  <%= field.hidden_field :quantity, value: item["quantity"] %>
+                  <%= field.hidden_field :unit_price, value: item["unit_price"] %>
+                <% end %>
+              <% end %>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="block-form order-review">
+              <h3 class="form-heading">
+                <%= t "home_page.order.info_title" %>
+              </h3>
+              <table class="shop_table">
+                <thead>
+                <tr>
+                    <th class="product-name">
+                      <%= t "home_page.word_product" %>
+                    </th>
+                    <th class="product-total">
+                      <%= t "home_page.word_sub_total" %>
+                    </th>
+                  </tr>
+              </thead>
+              <tbody id="mike-order-sub">
+                <%= render "sub" %>
+              </tbody>
+              <tfoot>
+                <tr class="order-total">
+                  <th><%= t "home_page.cart.total" %></th>
+                  <td>
+                    <strong><span class="amount">
+                    <%= number_to_currency current_cart_total_price %></span>
+                    </strong>
+                  </td>
+                </tr>
+              </tfoot>
+            </table>
+              <%= f.submit t("home_page.button.order"),
+                class: "button primary", name: :order_button %>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

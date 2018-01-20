@@ -13,57 +13,14 @@
                 <th><%= t "home_page.cart.remove" %></th>
               </tr>
             </thead>
-            <tbody>
-              <tr>
-                <td class="product">
-                  <%= image_tag "products/1.jpg", class: "product-thumb" %>
-                  <div class="product-info">
-                    <h3 class="product-name">
-                      <%= link_to "Stockholm Chair high Mosta gruancy", "#" %>
-                    </h3>
-                    <span class="product-price">
-                      <%= number_to_currency 75 %>
-                    </span>
-                  </div>
-                </td>
-                <td class="stock">
-                  <span class="in-stock">
-                    <%= t "home_page.product.status.instock" %>!
-                  </span>
-                </td>
-                <td>
-                  <div class="quantity">
-                    <%= text_field_tag "quantity",
-                      Settings.quantity.value,
-                      title: t("home_page.product.title_quantity"),
-                      size: Settings.quantity.size, class: "input-text qty text",
-                      data: {min: "", max: ""} %>
-                  </div>
-                </td>
-                <td class="product-subtotal">
-                  <span class="amount">
-                    <%= number_to_currency 75 %>
-                  </span>
-                </td>
-                <td class="product-remove">
-                  <%= link_to "#", class: "remove" do %>
-                    <i class="fa fa-close"></i>
-                  <% end %>
-                </td>
-              </tr>
-              <tr>
-                <td colspan="3"></td>
-                <td colspan="2" class="order-total">
-                  <%= t "home_page.cart.total" %>:
-                  <%= number_to_currency 75 %>
-                </td>
-              </tr>
+            <tbody id="mike-cart-content">
+              <%= render "detail_list" %>
             </tbody>
           </table>
           <div class="block-form-footer">
             <%= button_tag t("home_page.button.update_cart"),
-              class: "button", name: :update_cart_button %>
-            <%= button_tag t("home_page.button.process_order"),
+              class: "button mike-hidden-btn-cart", name: :update_cart_button %>
+            <%= link_to t("home_page.button.process_order"), new_orders_path,
               class: "button pull-right primary", name: :order_button %>
           </div>
         </div>
