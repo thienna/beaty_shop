@@ -24,6 +24,7 @@ RemoveEmptyHelpersCheck: { }
 #RemoveTabCheck: { }
 RemoveTrailingWhitespaceCheck: { }
 RemoveUnusedMethodsInControllersCheck: { except_methods: [
+  "OrderDetailsController#create",
   "Admin::ProductsController#create",
   "Admin::CategoriesController#create",
   "ApplicationController#after_sign_in_path_for",

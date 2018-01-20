@@ -8,7 +8,7 @@
   <body>
     <%= render "layouts/mobile_menu" %>
     <%= render "layouts/header", search: @search %>
-    <div id="mike-flash">
+    <div id="mike-flash" class="mike-flash-wrapper">
       <%= render "shared/flash_messages" %>
     </div>
     <%= yield %>

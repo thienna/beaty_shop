@@ -32,16 +32,24 @@
                   <p><strong><%= t "home_page.product.description" %> </strong>
                   <%= @product.description %>
                 </div>
-                <div class="quantity">
-                  <label><%= t "home_page.product.select_quantity" %> </label>
-                  <%= text_field_tag "quantity",
-                    Settings.quantity.value,
-                    title: t("home_page.product.title_quantity"),
-                    size: Settings.quantity.size, class: "input-text qty text",
-                    data: {min: "", max: ""} %>
-                </div>
-                <%= button_tag t("home_page.add_to_cart"),
-                  class: "single_add_to_cart_button button alt" %>
+                <%= form_for :cart_detail, url: order_details_path,
+                  method: :post, remote: true do |f| %>
+                  <div class="quantity">
+                    <%= f.label :qty, t("home_page.product.select_quantity") %>
+                    <%= f.number_field :qty,
+                      value: Settings.product.quantity.default,
+                      title: t("home_page.product.title_quantity"),
+                      size: Settings.quantity.size,
+                      class: "input-text qty text",
+                      data:
+                        {min: Settings.product.quantity.default,
+                          max: @product.quantity} %>
+                  </div>
+                  <%= f.hidden_field :service, value: :add %>
+                  <%= f.hidden_field :product_id, value: @product.id %>
+                  <%= f.button t("home_page.add_to_cart"),
+                    class: "single_add_to_cart_button button alt" %>
+                <% end %>
               </div>
             </div>
           </div>

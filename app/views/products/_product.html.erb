@@ -6,7 +6,12 @@
           : image_tag("no-img.jpeg") %>
       <% end %>
       <div class="group-button">
-        <%= link_to t("home_page.add_to_cart"), "#",
+        <%= link_to t("home_page.add_to_cart"),
+          order_details_path(cart_detail:
+            {service: :add,
+              product_id: product.id, qty: Settings.product.quantity.default}),
+          method: :post,
+          remote: true,
           class: "button add_to_cart_button" %>
       </div>
       <div class="flash">
