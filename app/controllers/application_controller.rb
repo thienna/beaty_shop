@@ -2,6 +2,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   before_action :set_locale
+  before_action :set_global_search_variable
 
   class << self
     def default_url_options
@@ -17,5 +18,9 @@ class ApplicationController < ActionController::Base
 
   def after_sign_in_path_for _resource_or_scope
     admin_root_path
+  end
+
+  def set_global_search_variable
+    @search = Product.newest.ransack params[:q]
   end
 end

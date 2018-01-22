@@ -4,7 +4,14 @@
       <div class="col-sm-8 col-md-9 main-content">
         <div class="shop-page-bar">
           <div class="page-bar-right">
-            <%= render "shared/sorting" %>
+            <%= search_form_for @search, url: root_path,
+              class: "woocommerce-ordering" do |f| %>
+              <%= f.select :s,
+                  options_for_select(products_sort_types),
+                {include_blank: t("admin_page.button.h_sort")},
+                class: "orderby" %>
+              <%= f.hidden_field :name_cont, {value: @searching_params} %>
+            <% end %>
           </div>
         </div>
         <ul class="products product-list-grid
@@ -15,17 +22,55 @@
             <%= t "admin_page.w_no_record" %>
           <% end %>
         </ul>
-        <%= paginate @products %>
+        <%= paginate @products, theme: "home_page" %>
       </div>
       <div class="col-sm-4 col-md-3 sidebar">
         <br>
-        <% if @categories.any? %>
-          <%= render @categories %>
-        <% else %>
-          <%= t "admin_page.w_no_record" %>
-        <% end %>
-        <br>
-        <%= render "shared/filter_by_price" %>
+        <div class="widget widget_product_categories">
+          <h2 class="widget-title"><%= t "home_page.filter_by_cate" %></h2>
+          <ul class="product-categories">
+            <% if @support.all_categories.any? %>
+              <%= render @support.all_categories %>
+            <% else %>
+              <%= t "admin_page.w_no_record" %>
+            <% end %>
+          </ul>
+        </div>
+        <div class="widget widget_price_filter">
+          <h2 class="widget-title"><%= t "home_page.filter_by_price" %></h2>
+          <div class="price_slider_wrapper">
+            <div class="amount-range-price">
+              <%= t "home_page.price" %>
+              <span>
+                <%= number_to_currency @support.min_price %>
+              </span> -
+              <span>
+                <%= number_to_currency @support.max_price %>
+              </span>
+            </div>
+            <div data-label-reasult="<%= t "home_page.price" %>"
+               data-min="<%= @support.min_price %>"
+               data-max="<%= @support.max_price %>"
+               data-unit="<%= t "number.currency.format.unit" %>"
+               class="slider-range-price "
+               data-value-min="<%= @support.min_price %>"
+               data-value-max="<%= @support.max_price %>">
+            </div>
+            <div class="mike-hidden-filter-form">
+              <%= search_form_for @search, url: root_path do |f| %>
+                <%= f.hidden_field :price_gteq,
+                  {value: @support.min_price,
+                  class: "mike-hidden-filter-value-min"} %>
+                <%= f.hidden_field :price_lteq,
+                  {value: @support.max_price,
+                  class: "mike-hidden-filter-value-max"} %>
+                <%= f.submit t("admin_page.button.filter"),
+                  data: {"disable-with": t("admin_page.button.filtering")},
+                  class: "mike-filter-btn" %>
+              <% end %>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

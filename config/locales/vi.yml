@@ -41,7 +41,7 @@ vi:
       format:
         delimiter: " "
         separator: "."
-        unit: "VNĐ"
+        unit: " VNĐ"
         strip_insignificant_zeros: true
         format: "%n %u"
   home_page:
@@ -71,19 +71,19 @@ vi:
       status:
         new: "Mới"
         sale: "Giảm giá"
-        instock: "Sẵn sàng"
+        instock: "Còn hàng"
         outstock: "Hết hàng"
       available: "Trạng thái:"
       description: "Mô tả:"
       select_quantity: "Chọn số lượng:"
       title_quantity: "Qty"
     sort:
-      default: "Default sorting"
-      date: "Sort by newness"
-      name: "Sort by name: A-Z"
-      name_desc: "Sort by name: Z-A"
-      price: "Sort by price: low to high"
-      price_desc: "Sort by price: high to low"
+      default: "Đang lọc mặc định"
+      date: "Sắp xếp theo sản phẩm mới nhất"
+      name_asc: "Sắp xếp theo tên: A-Z"
+      name_desc: "Sắp xếp theo tên: Z-A"
+      price_asc: "Sắp xếp theo giá: thấp đến cao"
+      price_desc: "Sắp xếp theo giá: cao đến thấp"
     category:
       product: "Danh mục sản phẩm"
     filter_by_price: "Lọc theo giá"
@@ -231,8 +231,13 @@ vi:
       h_search: "Tìm trong bảng"
     button:
       search: "Tìm kiếm"
+      searching: "Đang tìm kiếm"
       filter: "Lọc"
+      filtering: "Đang lọc"
+      sort: "Sắp xếp"
+      sorting: "Đang sắp xếp"
       h_search: "Chọn một mục"
+      h_sort: "Chọn kiểu sắp xếp"
       create:
         category: "Tạo danh mục"
         product: "Tạo sản phẩm"

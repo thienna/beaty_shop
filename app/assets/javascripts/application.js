@@ -30,5 +30,6 @@
 //= require jquery.hoverdir.min
 //= require masonry.min
 //= require functions.min
+//= require main
 //= require rails-ujs
 //= require turbolinks

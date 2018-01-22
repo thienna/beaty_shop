@@ -23,7 +23,7 @@ class Product < ApplicationRecord
   scope :newest, ->{order created_at: :desc}
 
   def get_status
-    return :new if created_at >= Time.zone.now - 7
+    return :new if created_at >= 7.days.ago
     return :sale if price_sale > 0
     quantity > 0 ? :instock : :outstock
   end

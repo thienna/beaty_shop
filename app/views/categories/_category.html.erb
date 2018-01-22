@@ -1,4 +1,4 @@
 <li>
-  <%= link_to category.name, "#" %>
+  <%= link_to category.name, root_path(category: category.id) %>
   <span class="count">(<%= category.products.count %>)</span>
 </li>

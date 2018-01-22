@@ -7,7 +7,7 @@
 
   <body>
     <%= render "layouts/mobile_menu" %>
-    <%= render "layouts/header" %>
+    <%= render "layouts/header", search: @search %>
     <%= yield %>
     <%= render "layouts/footer" %>
   </body>
