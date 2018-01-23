@@ -87,6 +87,7 @@ vi:
     category:
       product: "Danh mục sản phẩm"
     filter_by_price: "Lọc theo giá"
+    filter_by_cate: "Lọc theo danh mục"
     price: "Giá:"
     cart:
       total: "Thành tiền"

@@ -12,7 +12,7 @@ class HomeController < ApplicationController
   private
 
   def load_support
-    @support = Supports::ProductSupport.new
+    @support = Supports::ResourcesSupport.new
   end
 
   def find_products_by_cate
