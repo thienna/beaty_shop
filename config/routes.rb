@@ -12,6 +12,7 @@ Rails.application.routes.draw do
     resources :products, only: :show
     resource :cart, only: :show
     resources :orders, only: :index
+    resources :order_details, only: :create
 
     devise_for :user, path: "",
       path_names: {sign_in: "login", sign_out: "logout"}

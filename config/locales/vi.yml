@@ -95,6 +95,10 @@ vi:
       available: "Tình trạng"
       remove: "Loại bỏ"
       product_price: "Sản phẩm/Giá"
+      action:
+        add_success: "Sản phẩm đã được thêm vào giỏ hàng thành công!"
+        add_already: "Sản phẩm đã tồn tại trong giỏ hàng."
+        check_qty: "Số lượng không hợp lệ."
     button:
       update_cart: "Cập nhật Giỏ Hàng"
       process_order: "Đến trang Đặt Hàng"
@@ -122,6 +126,7 @@ vi:
   w_orders: "Đơn hàng"
   w_products: "Sản phẩm"
   w_categories: "Danh mục"
+  w_something_wrong: "Có sự cố xảy ra."
   admin_page:
     new_order: "Đơn hàng mới!"
     title: "Trang quản trị"

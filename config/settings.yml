@@ -1,4 +1,5 @@
 price:
+  default: 0
   minimum: 50
   maximum: 350
 quantity:
@@ -14,6 +15,7 @@ product:
     size: 3
   quantity:
     minimum: 0
+    default: 1
   per_page: 6
   sort_types:
     name_asc: "name asc"

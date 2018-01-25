@@ -76,6 +76,10 @@ en:
       available: "Available"
       remove: "Remove"
       product_price:  "Product/Price"
+      action:
+        add_success: "Successfully add product to Cart"
+        add_already: "Product has been already in Cart"
+        check_qty: "Quantity not valid."
     button:
       update_cart: "Update SHOPPING CART"
       process_order: "Proceed to ORDER"
@@ -103,6 +107,7 @@ en:
   w_orders: "Orders"
   w_products: "Products"
   w_categories: "Categories"
+  w_something_wrong: "Something went wrong."
   admin_page:
     new_order: "New Orders!"
     title: "Cosmetic Shop Admin"
