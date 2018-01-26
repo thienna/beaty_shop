@@ -62,6 +62,22 @@ Rails.application.configure do
   # config.active_job.queue_name_prefix = "shop_#{Rails.env}"
   config.action_mailer.perform_caching = false
 
+  # Custom config mailer
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.delivery_method = :smtp
+  host = "localhost:3000"
+  config.action_mailer.default_url_options = {host: host, protocol: "http"}
+  config.action_mailer.smtp_settings = {
+    address: "smtp.mailgun.org",
+    port: 587,
+    authentication: :plain,
+    user_name: ENV["MAIL_USERNAME"],
+    password: ENV["MAIL_PASSWORD"],
+    domain: ENV["MAIL_DOMAIN"],
+    enable_starttls_auto: true
+  }
+
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   # config.action_mailer.raise_delivery_errors = false
